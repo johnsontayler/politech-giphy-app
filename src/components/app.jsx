@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import SearchBar from './search_bar';
 
 class App extends Component {
 
@@ -17,6 +18,7 @@ class App extends Component {
             <p>When you find a GIF that you like, press the <i>Like</i> button.
               Once you like 5 GIFs, we'll show you how weird you
               are.</p>
+            <SearchBar />
           </div>
           <div className="right-scene">
           </div>
