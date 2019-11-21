@@ -10,6 +10,14 @@ class App extends Component {
 
   render() {
 
+    const gifsLiked = [
+      { id: "9Xh1CGm4Hzo4g" },
+      { id: "3o7TKsMrLzh993NPsA" },
+      { id: "WeaIjMN9QUrsI" },
+      { id: "anxJh9Vufpgvm" },
+      { id: "tZqHBmFpCg0VeXm1Em" }
+    ]
+
     return (
       <div>
         <div className="banner">
@@ -28,7 +36,7 @@ class App extends Component {
             </div>
             <div className="gif-result">
               <h3>YOUR RESULT</h3>
-              <Gif />
+              <Gif id={"3o7TKyL1IgyDtHlg6A"} />
               <br /><br />
               <button className="btn btn-primary btn-like my-2 my-sm-0"
                 type="submit">
@@ -37,7 +45,7 @@ class App extends Component {
             </div>
           </div>
           <div className="right-scene">
-            <LikedGifs />
+            <LikedGifs gifsLiked={gifsLiked} />
           </div>
         </div>
       </div>
