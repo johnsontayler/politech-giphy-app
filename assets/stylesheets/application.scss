@@ -7,7 +7,7 @@ body {
 }
 
 .banner {
-  padding: 20px 60px 20px 60px;
+  padding: 20px 30px 20px 30px;
   border: 1px solid;
   font-size: 2.6em;
   background-color: #337ab7;
@@ -23,7 +23,7 @@ body {
 .left-scene {
   height: 100vh;
   flex: 0 0 55%;
-  position: sticky;
+  // position: sticky;
   display: flex;
   flex-direction: column;
 
@@ -59,8 +59,13 @@ body {
   height: 100vh;
   flex: 0 0 45%;
   background-color: #ecf0f178;
-  overflow: scroll;
+  // overflow: scroll;
   padding: 15px;
+  text-align: center;
+
+  h3 {
+    text-align: left;
+  }
 
   .gifs-liked {
     column-count: 2;
