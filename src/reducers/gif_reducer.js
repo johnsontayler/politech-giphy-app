@@ -1,12 +1,14 @@
 const gifReducer = (state, action) => {
-  state === undefined ? [] : "";
+  if (state === undefined) {
+    return [];
+  }
 
   switch (action.type) {
     case 'SET_GIF':
-      return action.payload
+      return action.payload;
     default:
-      return state
-  };
+      return state;
+  }
 }
 
 export default gifReducer;
