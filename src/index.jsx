@@ -1,19 +1,20 @@
-//React
+//  React
 import React from 'react';
 import ReactDOM from 'react-dom';
 import '../assets/stylesheets/application.scss';
-import App from './components/app'
 
-//Redux
+//  Redux
 import { Provider } from 'react-redux';
 import { createStore, combineReducers } from 'redux';
-import gifReducer from './reducers/flats_reducer';
+import gifReducer from './reducers/gif_reducer';
+
+import App from './components/app';
 
 const reducers = combineReducers({
   gif: gifReducer
 });
 
-//Render
+//  Render
 const root = document.getElementById('root');
 if (root) {
   ReactDOM.render(
