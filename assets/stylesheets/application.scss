@@ -7,11 +7,11 @@ body {
 }
 
 .banner {
-  // width: 100%;
   padding: 20px 60px 20px 60px;
   border: 1px solid;
   font-size: 2.6em;
-  background-color: #ecf0f1;
+  background-color: #337ab7;
+  color: white;
 }
 
 .main-content {
@@ -27,25 +27,9 @@ body {
   display: flex;
   flex-direction: column;
 
-  .form-search {
-    // padding: 60px 60px 60px 120px;
-    // border: none;
-    // font-size: 2.6em;
-    // box-shadow: none;
-    &:focus {
-      box-shadow: none;
-    }
+  .form-inline {
+    margin-top: 70px;
   }
-
-  // &:before {
-  //   content: '\F002';
-  //   position: absolute;
-  //   top: 35px;
-  //   left: 60px;
-  //   font-family: FontAwesome;
-  //   font-size: 2.6em;
-  //   opacity: 0.4;
-  // }
 
   .gif-result {
     text-align: center;
