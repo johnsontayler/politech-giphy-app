@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import SearchBar from './search_bar';
 import Gif from '../containers/gif'
+import LikedGifs from '../containers/liked_gifs'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faThumbsUp } from '@fortawesome/free-solid-svg-icons'
 
@@ -28,13 +30,14 @@ class App extends Component {
               <h3>YOUR RESULT</h3>
               <Gif />
               <br /><br />
-              {/* <button className="btn btn-primary btn-like my-2 my-sm-0"
+              <button className="btn btn-primary btn-like my-2 my-sm-0"
                 type="submit">
                 <FontAwesomeIcon icon={faThumbsUp} />
-              </button> */}
+              </button>
             </div>
           </div>
           <div className="right-scene">
+            <LikedGifs />
           </div>
         </div>
       </div>
