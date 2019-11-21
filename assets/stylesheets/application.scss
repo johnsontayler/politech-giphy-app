@@ -2,46 +2,50 @@ body {
   font-family: Helvetica;
 }
 
-#root {
+#root > div {
   height: 100vh;
+}
+
+.banner {
+  // width: 100%;
+  padding: 20px 60px 20px 60px;
+  border: 1px solid;
+  font-size: 2.6em;
+  background-color: #ecf0f1;
+}
+
+.main-content {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.banner {
-  width: 100%;
-  padding: 60px 60px 60px 120px;
-  border: 2px solid;
-  font-size: 2.6em;
-  background-color: #ecf0f1;
-}
-
 .left-scene {
-  flex: 0 0 60%;
+  height: 100vh;
+  flex: 0 0 55%;
   position: sticky;
   display: flex;
   flex-direction: column;
 
   .form-search {
-    padding: 60px 60px 60px 120px;
-    border: none;
-    font-size: 2.6em;
-    box-shadow: none;
+    // padding: 60px 60px 60px 120px;
+    // border: none;
+    // font-size: 2.6em;
+    // box-shadow: none;
     &:focus {
       box-shadow: none;
     }
   }
 
-  &:before {
-    content: '\F002';
-    position: absolute;
-    top: 35px;
-    left: 60px;
-    font-family: FontAwesome;
-    font-size: 2.6em;
-    opacity: 0.4;
-  }
+  // &:before {
+  //   content: '\F002';
+  //   position: absolute;
+  //   top: 35px;
+  //   left: 60px;
+  //   font-family: FontAwesome;
+  //   font-size: 2.6em;
+  //   opacity: 0.4;
+  // }
 
   .gif-result {
     text-align: center;
@@ -59,8 +63,9 @@ body {
 }
 
 .right-scene {
-  flex: 0 0 40%;
-  background-color: #ecf0f1;
+  height: 100vh;
+  flex: 0 0 45%;
+  background-color: #ecf0f178;
   overflow: scroll;
 
   .gifs-liked {
