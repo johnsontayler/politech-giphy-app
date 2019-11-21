@@ -2,7 +2,7 @@ body {
   font-family: Helvetica;
 }
 
-#root {
+#root > div {
   height: 100vh;
 }
 
@@ -21,6 +21,7 @@ body {
 }
 
 .left-scene {
+  height: 100vh;
   flex: 0 0 55%;
   position: sticky;
   display: flex;
@@ -62,8 +63,9 @@ body {
 }
 
 .right-scene {
+  height: 100vh;
   flex: 0 0 45%;
-  background-color: #ecf0f1;
+  background-color: #ecf0f178;
   overflow: scroll;
 
   .gifs-liked {
