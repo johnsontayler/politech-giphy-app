@@ -39,13 +39,21 @@ class App extends Component {
               <Gif id={"3o7TKyL1IgyDtHlg6A"} />
               <br /><br />
               <button className="btn btn-primary btn-like my-2 my-sm-0"
-                type="submit">
+                type="submit" style={{ padding: "6px 40px" }}>
                 <FontAwesomeIcon icon={faThumbsUp} />
               </button>
             </div>
           </div>
           <div className="right-scene">
+            <h3>YOUR LIKED GIFS</h3>
             <LikedGifs gifsLiked={gifsLiked} />
+            <br /><br /><br />
+            <button className="btn btn-primary btn-like my-2 my-sm-0"
+              type="submit">
+              CALCULATE MY WEIRDNESS SCORE
+            </button>
+            <br /><br />
+            <p>You must <i>Like</i> 1 more GIF to calculate your score.</p>
           </div>
         </div>
       </div>
