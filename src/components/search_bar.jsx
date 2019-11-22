@@ -17,7 +17,6 @@ class SearchBar extends Component {
   };
 
   render() {
-    // const { handleSubmit } = this.props;
     const style = { borderRadius: 0 };
 
     return (
@@ -41,10 +40,6 @@ class SearchBar extends Component {
     );
   }
 }
-
-// SearchBar = reduxForm({
-//   form: 'SearchBar'
-// })(SearchBar)
 
 function mapDispatchToProps(dispatch) {
   return bindActionCreators(
