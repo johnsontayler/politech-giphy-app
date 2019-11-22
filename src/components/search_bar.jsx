@@ -1,21 +1,26 @@
 import React, { Component } from 'react';
-import { reduxForm, Field } from 'redux-form';
+// import { reduxForm, Field } from 'redux-form';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { submitTerm } from '../actions';
+import { setGif } from '../actions';
 
 class SearchBar extends Component {
+  onSubmit = e => {
+    e.preventDefault();
+    this.props.setGif(e.target.search.value);
+  };
+
   render() {
-    const { handleSubmit } = this.props;
+    // const { handleSubmit } = this.props;
     const style = { borderRadius: 0 };
 
     return (
       <form className="form-inline my-2 my-lg-0"
-        onSubmit={handleSubmit(submitTerm)}>
+        onSubmit={this.onSubmit}>
         <p>Search term</p>
-        <Field className="form-control"
-          component="input"
+        <input className="form-control"
+          // component="input"
           name="search"
           placeholder="Hamburger"
           type="text"
@@ -32,13 +37,13 @@ class SearchBar extends Component {
   }
 }
 
-SearchBar = reduxForm({
-  form: 'SearchBar'
-})(SearchBar)
+// SearchBar = reduxForm({
+//   form: 'SearchBar'
+// })(SearchBar)
 
 function mapDispatchToProps(dispatch) {
   return bindActionCreators(
-    { submitTerm: submitTerm },
+    { setGif: setGif },
     dispatch
   );
 }
