@@ -14,11 +14,12 @@ export function setGif(term) {
   };
 }
 
-export function likeGif(gif) {
-  let likedGifs = [].push(gif)
+export function likeGif(id) {
+  const gifsLIked = [];
+  if (id) { gifsLIked.push(id); }
 
   return {
     type: LIKE_GIF,
-    payload: likedGifs
+    payload: gifsLIked
   };
 }
