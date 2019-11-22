@@ -60,7 +60,7 @@ class App extends Component {
             <br />
             <p>
               You must
-              <i>Like</i>
+              <i> Like </i>
               1 more GIF to calculate your score.
             </p>
           </div>

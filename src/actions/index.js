@@ -1,4 +1,5 @@
 export const SET_GIF = 'SET_GIF';
+export const LIKE_GIF = 'LIKE_GIF';
 
 export function setGif(term) {
   let weirdness = 10;
@@ -10,5 +11,14 @@ export function setGif(term) {
   return {
     type: SET_GIF,
     payload: promise
+  };
+}
+
+export function likeGif(gif) {
+  let likedGifs = [].push(gif)
+
+  return {
+    type: LIKE_GIF,
+    payload: likedGifs
   };
 }
