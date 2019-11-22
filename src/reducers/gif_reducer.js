@@ -1,14 +1,14 @@
-const gifReducer = (state, action) => {
+import { SET_GIF } from '../actions';
+
+export default function (state, action) {
   if (state === undefined) {
-    return [];
+    return {};
   }
 
   switch (action.type) {
-    case 'SET_GIF':
+    case SET_GIF:
       return action.payload;
     default:
       return state;
   }
 }
-
-export default gifReducer;
