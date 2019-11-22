@@ -6,6 +6,11 @@ import { bindActionCreators } from 'redux';
 import { setGif } from '../actions';
 
 class SearchBar extends Component {
+
+  componentWillMount() {
+    this.props.setGif('Hamburger');
+  }
+
   onSubmit = e => {
     e.preventDefault();
     this.props.setGif(e.target.search.value);
