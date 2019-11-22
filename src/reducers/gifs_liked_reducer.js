@@ -1,4 +1,4 @@
-import { SET_GIF } from '../actions';
+import { LIKE_GIF } from '../actions';
 
 export default function (state, action) {
   if (state === undefined) {
@@ -6,8 +6,8 @@ export default function (state, action) {
   }
 
   switch (action.type) {
-    case SET_GIF:
-      return action.payload.data
+    case LIKE_GIF:
+      return action.payload
     default:
       return state;
   }
