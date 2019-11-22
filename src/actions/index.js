@@ -9,7 +9,7 @@ export function setGif(value = "Hamburger") {
   console.log(string);
   let weirdness = 0;
   const GIPHY_API_KEY = 'dFHHRwtfNPxLFWUitpW96f1QWdm6AceW';
-  const url = `http://api.giphy.com/v1/gifs/translate?s=${string}?weirdness=${weirdness}&api_key=${GIPHY_API_KEY}&limit=1`
+  const url = `http://api.giphy.com/v1/gifs/translate?s=${string}?weirdness=${weirdness}&api_key=${GIPHY_API_KEY}`
 
   const promise = fetch(url).then(response => response.json());
 
