@@ -7,7 +7,6 @@ import Gif from '../containers/gif';
 import LikedGifs from '../containers/liked_gifs';
 
 class App extends Component {
-
   render() {
     const gifsLiked = [
       { id: "9Xh1CGm4Hzo4g" },
@@ -39,7 +38,7 @@ class App extends Component {
             </div>
             <div className="gif-result">
               <h3>YOUR RESULT</h3>
-              <Gif id="3o7TKyL1IgyDtHlg6A" />
+              <Gif />
               <br />
               <br />
               <button className="btn btn-primary btn-like my-2 my-sm-0" type="submit"
