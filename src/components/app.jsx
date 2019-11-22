@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 
 import SearchBar from './search_bar';
-import Gif from '../containers/gif';
-import Button from './button';
+import GifResult from '../containers/gif_result';
+import LikeButton from './like_button';
 import GifsLiked from '../containers/gifs_liked';
 
 class App extends Component {
@@ -31,10 +29,10 @@ class App extends Component {
             </div>
             <div className="gif-result">
               <h3>YOUR RESULT</h3>
-              <Gif />
+              <GifResult />
               <br />
               <br />
-              <Button />
+              <LikeButton />
             </div>
           </div>
           <div className="right-scene">
