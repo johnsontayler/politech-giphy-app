@@ -12,7 +12,7 @@ class LikedGifs extends Component {
           return (
             <div style={{ position: "relative" }}
               key={"div" + gif.id}>
-              <Gif id={gif.id} key={gif.id} />
+              <Gif gif={gif} key={gif.id} />
               <FontAwesomeIcon icon={faTimesCircle}
                 className="fa-times-circle"
                 key={"icon" + gif.id}
