@@ -7,7 +7,7 @@ import { setGif } from '../actions';
 class Gif extends Component {
 
   componentWillMount() {
-    this.props.setGif();
+    this.props.setGif('Hamburger');
   }
 
   render() {
