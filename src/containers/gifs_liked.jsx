@@ -4,7 +4,7 @@ import { faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 
 import Gif from './gif';
 
-class LikedGifs extends Component {
+class GifsLiked extends Component {
   render() {
     return (
       <div className="gifs-liked">
@@ -25,4 +25,4 @@ class LikedGifs extends Component {
   }
 }
 
-export default LikedGifs;
+export default GifsLiked;
