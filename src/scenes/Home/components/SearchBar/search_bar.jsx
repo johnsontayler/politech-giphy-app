@@ -1,8 +1,10 @@
+//  External modules
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { setGif } from '../actions';
+//  Actions
+import { setGif } from '../../services/setGifs/actions';
 
 class SearchBar extends Component {
 
