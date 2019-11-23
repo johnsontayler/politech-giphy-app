@@ -1,10 +1,12 @@
+//  External modules
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 
-import { removeGif } from '../actions';
+// Actions
+import { removeGif } from '../../services/setGifs/actions';
 
 class RemoveButton extends Component {
 
