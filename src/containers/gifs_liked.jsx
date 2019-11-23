@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 
 import Gif from './gif';
+import RemoveButton from '../components/remove_button';
 
 class GifsLiked extends Component {
+
   render() {
     const gifsLiked = this.props.gifsLiked;
 
@@ -16,10 +16,7 @@ class GifsLiked extends Component {
             <div style={{ position: "relative" }}
               key={"div" + index}>
               <Gif id={gif.id} key={index} />
-              <FontAwesomeIcon icon={faTimesCircle}
-                className="fa-times-circle"
-                key={"icon" + index}
-              />
+              <RemoveButton gifIndex={index} />
             </div>
           );
         })}
