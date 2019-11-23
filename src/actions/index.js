@@ -27,6 +27,7 @@ export function removeGif(index) {
 
   return {
     type: REMOVE_GIF,
-    index: index
+    index: index,
+    count: 1
   };
 }
