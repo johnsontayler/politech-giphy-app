@@ -1,10 +1,12 @@
+//  External modules
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 
-import { likeGif } from '../actions';
+// Actions
+import { likeGif } from '../../services/setGifs/actions';
 
 class LikeButton extends Component {
 

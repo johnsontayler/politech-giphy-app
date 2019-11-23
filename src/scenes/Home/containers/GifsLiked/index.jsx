@@ -1,8 +1,10 @@
+//  External modules
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import Gif from './gif';
-import RemoveButton from '../components/remove_button';
+//  Components
+import Gif from '../../components/Gif';
+import ButtonUnlike from '../../components/ButtonUnlike';
 
 class GifsLiked extends Component {
 
@@ -16,7 +18,7 @@ class GifsLiked extends Component {
             <div style={{ position: "relative" }}
               key={"div" + index}>
               <Gif id={gif.id} key={index} />
-              <RemoveButton gifIndex={index} />
+              <ButtonUnlike gifIndex={index} />
             </div>
           );
         })}

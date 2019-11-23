@@ -5,14 +5,16 @@ import { Provider } from 'react-redux';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { logger } from 'redux-logger';
 import reduxPromise from 'redux-promise';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { createHistory as history } from 'history';
 
 //  Internal modules
 import '../assets/stylesheets/application.scss';
-import App from './components/app';
+import Home from './scenes/Home/app';
 
 //  Reducers
-import gifReducer from './reducers/gif_reducer';
-import gifsLikedReducer from './reducers/gifs_liked_reducer';
+import gifReducer from './scenes/Home/services/setGifs/reducers/gif_reducer';
+import gifsLikedReducer from './scenes/Home/services/setGifs/reducers/gifs_liked_reducer';
 
 const reducers = combineReducers({
   gif: gifReducer,
@@ -26,7 +28,12 @@ const root = document.getElementById('root');
 if (root) {
   ReactDOM.render(
     <Provider store={createStore(reducers, middlewares)}>
-      <App />
+      <Router history={history}>
+        <Switch>
+          <Route path="/" component={Home} />
+          {/* <Route path="/:results" component={AppResults} /> */}
+        </Switch>
+      </Router>
     </Provider>, root
   );
 }
