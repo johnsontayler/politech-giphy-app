@@ -11,14 +11,12 @@ import '../assets/stylesheets/application.scss';
 import App from './components/app';
 
 //  Reducers
-import { reducer as formReducer } from 'redux-form';
 import gifReducer from './reducers/gif_reducer';
 import gifsLikedReducer from './reducers/gifs_liked_reducer';
 
 const reducers = combineReducers({
   gif: gifReducer,
   gifsLiked: gifsLikedReducer,
-  form: formReducer
 });
 
 const middlewares = applyMiddleware(logger, reduxPromise);
