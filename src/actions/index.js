@@ -18,7 +18,8 @@ export function likeGif(gif) {
 
   return {
     type: LIKE_GIF,
-    gifLiked: gif
+    gifs: gif,
+    count: 1
   };
 }
 
@@ -26,6 +27,7 @@ export function removeGif(index) {
 
   return {
     type: REMOVE_GIF,
-    index: index
+    index: index,
+    count: 1
   };
 }

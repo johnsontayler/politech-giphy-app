@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 
 import SearchBar from './search_bar';
-import GifResult from '../containers/gif_result';
 import LikeButton from './like_button';
+import GifResult from '../containers/gif_result';
 import GifsLiked from '../containers/gifs_liked';
+import GifsLikedCounter from '../containers/gifs_liked_counter';
 
 class App extends Component {
   render() {
@@ -41,19 +42,17 @@ class App extends Component {
             <br />
             <br />
             <br />
-            <button className="btn btn-primary btn-like my-2 my-sm-0" type="submit">
+            <button className="btn btn-primary btn-calcuate my-2 my-sm-0"
+              type="submit"
+              style={{ borderRadius: 2 }}>
               CALCULATE MY WEIRDNESS SCORE
             </button>
             <br />
             <br />
-            <p>
-              You must
-              <i> Like </i>
-              1 more GIF to calculate your score.
-            </p>
+            <GifsLikedCounter />
           </div>
         </div>
-      </div>
+      </div >
     );
   }
 }
