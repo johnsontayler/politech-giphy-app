@@ -42,7 +42,9 @@ class App extends Component {
             <br />
             <br />
             <br />
-            <button className="btn btn-primary btn-like my-2 my-sm-0" type="submit">
+            <button className="btn btn-primary btn-calcuate my-2 my-sm-0"
+              type="submit"
+              style={{ borderRadius: 2 }}>
               CALCULATE MY WEIRDNESS SCORE
             </button>
             <br />
@@ -50,7 +52,7 @@ class App extends Component {
             <GifsLikedCounter />
           </div>
         </div>
-      </div>
+      </div >
     );
   }
 }
