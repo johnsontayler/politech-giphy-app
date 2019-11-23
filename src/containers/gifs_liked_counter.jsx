@@ -6,7 +6,7 @@ class GifsLikedCounter extends Component {
     return (
       <p>You must
         <i> Like </i>
-        {5 - this.props.gifsLikedCount}
+        {`${this.props.gifsLikedCount} `}
         more GIFs to calculate your score.
       </p>
     );
