@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 //  Components
 import Gif from '../../components/Gif';
-import ButtonUnlike from '../../ButtonUnlike';
+import ButtonUnlike from '../../components/ButtonUnlike';
 
 class GifsLiked extends Component {
 
