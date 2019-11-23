@@ -10,21 +10,13 @@ class GifsLikedCounter extends Component {
         return <p>Calculate your score!</p>;
       case 1:
         return <p>You must <i> Like </i>
-        {countsLeft} more GIF to calculate your score.</p>;
+          {countsLeft} more GIF to calculate your score.</p>;
       default:
-        return <p>You must <i> Like </i>{countsLeft} more GIFs 
+        return <p>You must <i> Like </i>{countsLeft} more GIFs
         to calculate your score.</p>;
     };
   }
 }
-
-// return (
-//   <p>You must
-//     <i> Like </i>
-//     {`${countsLeft} `}
-//     more GIFs to calculate your score.
-//   </p>
-// );
 
 function mapStateToProps(state) {
   return { gifsLikedCount: state.gifsLiked.count };
