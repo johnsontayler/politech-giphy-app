@@ -1,8 +1,6 @@
 export const SET_GIF = 'SET_GIF';
 export const LIKE_GIF = 'LIKE_GIF';
 
-const gifsLiked = [];
-
 export function setGif(term) {
   let weirdness = 10;
   const GIPHY_API_KEY = 'dFHHRwtfNPxLFWUitpW96f1QWdm6AceW';
@@ -16,10 +14,9 @@ export function setGif(term) {
 }
 
 export function likeGif(gif) {
-  gifsLiked.push(gif);
 
   return {
     type: LIKE_GIF,
-    gifsLiked: gifsLiked
+    gifLiked: gif
   };
 }
