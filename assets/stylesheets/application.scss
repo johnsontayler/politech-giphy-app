@@ -47,9 +47,10 @@ body {
     }
 
     .gif {
-      width: 50%;
-      min-height: 200px;
-      max-height: 200px;
+      max-width: 80%;
+      max-height: 80%;
+      // min-height: 200px;
+      // max-height: 200px;
       margin: auto;
     }
   }
