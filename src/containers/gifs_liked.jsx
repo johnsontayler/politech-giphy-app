@@ -26,7 +26,7 @@ class GifsLiked extends Component {
 }
 
 function mapStateToProps(state) {
-  return { gifsLiked: state.gifsLiked };
+  return { gifsLiked: state.gifsLiked.gifs };
 }
 
 export default connect(mapStateToProps)(GifsLiked);
