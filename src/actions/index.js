@@ -18,7 +18,8 @@ export function likeGif(gif) {
 
   return {
     type: LIKE_GIF,
-    gifLiked: gif
+    gifs: gif,
+    count: 0
   };
 }
 
