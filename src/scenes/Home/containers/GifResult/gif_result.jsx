@@ -1,7 +1,9 @@
+//  External modules
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import Gif from './gif';
+//  Components
+import Gif from '../../components/Gif';
 
 class GifResult extends Component {
 
