@@ -1,5 +1,6 @@
 export const SET_GIF = 'SET_GIF';
 export const LIKE_GIF = 'LIKE_GIF';
+export const REMOVE_GIF = 'REMOVE_GIF';
 
 export function setGif(term) {
   let weirdness = 10;
@@ -18,5 +19,13 @@ export function likeGif(gif) {
   return {
     type: LIKE_GIF,
     gifLiked: gif
+  };
+}
+
+export function removeGif(index) {
+
+  return {
+    type: REMOVE_GIF,
+    index: index
   };
 }
