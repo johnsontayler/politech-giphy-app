@@ -3,15 +3,28 @@ import { connect } from 'react-redux';
 
 class GifsLikedCounter extends Component {
   render() {
-    return (
-      <p>You must
-        <i> Like </i>
-        {`${this.props.gifsLikedCount} `}
-        more GIFs to calculate your score.
-      </p>
-    );
+    const countsLeft = this.props.gifsLikedCount;
+
+    switch (countsLeft) {
+      case 0:
+        return <p>Calculate your score!</p>;
+      case 1:
+        return <p>You must <i> Like </i>
+        {countsLeft} more GIF to calculate your score.</p>;
+      default:
+        return <p>You must <i> Like </i>{countsLeft} more GIFs 
+        to calculate your score.</p>;
+    };
   }
 }
+
+// return (
+//   <p>You must
+//     <i> Like </i>
+//     {`${countsLeft} `}
+//     more GIFs to calculate your score.
+//   </p>
+// );
 
 function mapStateToProps(state) {
   return { gifsLikedCount: state.gifsLiked.count };
