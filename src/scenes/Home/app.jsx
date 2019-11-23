@@ -1,10 +1,12 @@
+//  External modules
 import React, { Component } from 'react';
 
-import SearchBar from './search_bar';
-import LikeButton from './like_button';
-import GifResult from '../containers/gif_result';
-import GifsLiked from '../containers/gifs_liked';
-import GifsLikedCounter from '../containers/gifs_liked_counter';
+//  Components+Containers
+import SearchBar from './components/SearchBar';
+import ButtonLike from './components/ButtonLike';
+import GifResult from './containers/GifResult';
+import GifsLiked from './containers/GifsLiked';
+import GifsLikedCounter from './containers/GifsLikedCounter';
 
 class App extends Component {
   render() {
@@ -33,7 +35,7 @@ class App extends Component {
               <GifResult />
               <br />
               <br />
-              <LikeButton />
+              <ButtonLike />
             </div>
           </div>
           <div className="right-scene">
