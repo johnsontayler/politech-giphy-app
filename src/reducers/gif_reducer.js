@@ -1,14 +1,12 @@
 import { SET_GIF } from '../actions';
 
-export default function (state, action) {
-  if (state === undefined) {
-    return [];
-  }
+export default function (prevState, action) {
+  if (prevState === undefined) return prevState = [];
 
   switch (action.type) {
     case SET_GIF:
       return action.payload.data
     default:
-      return state;
+      return prevState;
   }
 }

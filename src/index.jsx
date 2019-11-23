@@ -13,9 +13,11 @@ import App from './components/app';
 //  Reducers
 import { reducer as formReducer } from 'redux-form';
 import gifReducer from './reducers/gif_reducer';
+import gifsLikedReducer from './reducers/gifs_liked_reducer';
 
 const reducers = combineReducers({
   gif: gifReducer,
+  gifsLiked: gifsLikedReducer,
   form: formReducer
 });
 
@@ -25,7 +27,7 @@ const middlewares = applyMiddleware(logger, reduxPromise);
 const root = document.getElementById('root');
 if (root) {
   ReactDOM.render(
-    <Provider store={createStore(reducers, {}, middlewares)}>
+    <Provider store={createStore(reducers, middlewares)}>
       <App />
     </Provider>, root
   );

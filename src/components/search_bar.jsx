@@ -6,13 +6,17 @@ import { bindActionCreators } from 'redux';
 import { setGif } from '../actions';
 
 class SearchBar extends Component {
+
+  componentWillMount() {
+    this.props.setGif('Hamburger');
+  }
+
   onSubmit = e => {
     e.preventDefault();
     this.props.setGif(e.target.search.value);
   };
 
   render() {
-    // const { handleSubmit } = this.props;
     const style = { borderRadius: 0 };
 
     return (
@@ -36,10 +40,6 @@ class SearchBar extends Component {
     );
   }
 }
-
-// SearchBar = reduxForm({
-//   form: 'SearchBar'
-// })(SearchBar)
 
 function mapDispatchToProps(dispatch) {
   return bindActionCreators(

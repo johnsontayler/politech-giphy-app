@@ -1,21 +1,12 @@
 import React, { Component } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 
 import SearchBar from './search_bar';
-import Gif from '../containers/gif';
-import LikedGifs from '../containers/liked_gifs';
+import GifResult from '../containers/gif_result';
+import LikeButton from './like_button';
+import GifsLiked from '../containers/gifs_liked';
 
 class App extends Component {
   render() {
-    const gifsLiked = [
-      { id: "9Xh1CGm4Hzo4g" },
-      { id: "3o7TKsMrLzh993NPsA" },
-      { id: "WeaIjMN9QUrsI" },
-      { id: "anxJh9Vufpgvm" },
-      { id: "tZqHBmFpCg0VeXm1Em" }
-    ];
-
     return (
       <div>
         <div className="banner">
@@ -38,18 +29,15 @@ class App extends Component {
             </div>
             <div className="gif-result">
               <h3>YOUR RESULT</h3>
-              <Gif />
+              <GifResult />
               <br />
               <br />
-              <button className="btn btn-primary btn-like my-2 my-sm-0" type="submit"
-                style={{ padding: "6px 40px" }}>
-                <FontAwesomeIcon icon={faThumbsUp} />
-              </button>
+              <LikeButton />
             </div>
           </div>
           <div className="right-scene">
             <h3>YOUR LIKED GIFS</h3>
-            <LikedGifs gifsLiked={gifsLiked} />
+            <GifsLiked />
             <br />
             <br />
             <br />
@@ -60,7 +48,7 @@ class App extends Component {
             <br />
             <p>
               You must
-              <i>Like</i>
+              <i> Like </i>
               1 more GIF to calculate your score.
             </p>
           </div>
