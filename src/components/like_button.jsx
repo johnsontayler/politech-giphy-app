@@ -15,11 +15,16 @@ class LikeButton extends Component {
   };
 
   render() {
+    const style = {
+      borderRadius: 2,
+      padding: "6px 40px"
+    };
+
     return (
       <button className="btn btn-primary btn-like my-2 my-sm-0"
         onClick={this.handleLike}
         type="submit"
-        style={{ padding: "6px 40px" }}>
+        style={style}>
         <FontAwesomeIcon icon={faThumbsUp} />
       </button >
     );
