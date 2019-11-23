@@ -14,7 +14,11 @@ export default function (
         count: prevState.count - action.count
       }
     case REMOVE_GIF:
-      return prevState.filter((gif, index) => index != action.index)
+      return {
+        prevState,
+        gifs: prevState.gifs.filter((gif, index) => index != action.index),
+        count: prevState.count + action.count
+      }
     default:
       return prevState;
   }
