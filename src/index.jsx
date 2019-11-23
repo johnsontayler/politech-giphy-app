@@ -27,7 +27,7 @@ const middlewares = applyMiddleware(logger, reduxPromise);
 const root = document.getElementById('root');
 if (root) {
   ReactDOM.render(
-    <Provider store={createStore(reducers, {}, middlewares)}>
+    <Provider store={createStore(reducers, middlewares)}>
       <App />
     </Provider>, root
   );

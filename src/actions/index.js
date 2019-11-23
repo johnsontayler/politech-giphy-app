@@ -1,11 +1,12 @@
 export const SET_GIF = 'SET_GIF';
 export const LIKE_GIF = 'LIKE_GIF';
 
+const gifsLiked = [];
+
 export function setGif(term) {
   let weirdness = 10;
   const GIPHY_API_KEY = 'dFHHRwtfNPxLFWUitpW96f1QWdm6AceW';
-  const url = `http://api.giphy.com/v1/gifs/translate?s=${term}?weirdness=${weirdness}&api_key=${GIPHY_API_KEY}`
-  console.log(url);
+  const url = `http://api.giphy.com/v1/gifs/translate?s=${term}?weirdness=${weirdness}&api_key=${GIPHY_API_KEY}`;
   const promise = fetch(url).then(response => response.json());
 
   return {
@@ -14,12 +15,11 @@ export function setGif(term) {
   };
 }
 
-export function likeGif(id) {
-  const gifsLIked = [];
-  if (id) { gifsLIked.push(id); }
+export function likeGif(gif) {
+  gifsLiked.push(gif);
 
   return {
     type: LIKE_GIF,
-    payload: gifsLIked
+    gifsLiked: gifsLiked
   };
 }
