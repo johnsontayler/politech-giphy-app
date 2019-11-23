@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import { reduxForm, Field } from 'redux-form';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
@@ -17,14 +16,13 @@ class SearchBar extends Component {
   };
 
   render() {
-    const style = { borderRadius: 0 };
+    const style = { borderRadius: 2 };
 
     return (
       <form className="form-inline my-2 my-lg-0"
         onSubmit={this.onSubmit}>
         <p>Search term</p>
         <input className="form-control"
-          // component="input"
           name="search"
           placeholder="Hamburger"
           type="text"
