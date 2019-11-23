@@ -8,15 +8,16 @@ import { likeGif } from '../actions';
 
 class LikeButton extends Component {
 
-  handleLikedGif = () => {
-    console.log(this.props.gif)
-    this.props.likeGif(this.props.gif);
+  handleLike = (e) => {
+    e.preventDefault();
+    const gif = this.props.gif;
+    this.props.likeGif(gif);
   };
 
   render() {
     return (
       <button className="btn btn-primary btn-like my-2 my-sm-0"
-        onClick={this.handleLikedGif}
+        onClick={this.handleLike}
         type="submit"
         style={{ padding: "6px 40px" }}>
         <FontAwesomeIcon icon={faThumbsUp} />
