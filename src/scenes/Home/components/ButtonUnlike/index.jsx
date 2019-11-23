@@ -6,9 +6,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 
 // Actions
-import { removeGif } from '../../services/setGifs/actions';
+import { unlikeGif } from '../../services/setGifs/actions';
 
-class RemoveButton extends Component {
+class ButtonUnlike extends Component {
 
   handleRemove = (e) => {
     e.preventDefault();
@@ -28,9 +28,9 @@ class RemoveButton extends Component {
 
 function mapDispatchToProps(dispatch) {
   return bindActionCreators(
-    { removeGif: removeGif },
+    { unlikeGif: unlikeGif },
     dispatch
   );
 }
 
-export default connect(null, mapDispatchToProps)(RemoveButton);
+export default connect(null, mapDispatchToProps)(ButtonUnlike);
