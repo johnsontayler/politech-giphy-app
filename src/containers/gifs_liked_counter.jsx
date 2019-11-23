@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 class GifsLikedCounter extends Component {
   render() {
-    const countsLeft = this.props.gifsLikedCount;
+    const countsLeft = 5 - this.props.gifsLikedCount;
 
     switch (countsLeft) {
       case 0:
