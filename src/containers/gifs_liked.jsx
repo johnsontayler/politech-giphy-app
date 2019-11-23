@@ -8,18 +8,17 @@ import Gif from './gif';
 class GifsLiked extends Component {
   render() {
     const gifsLiked = this.props.gifsLiked;
-    // console.log(gifsLiked);
 
     return (
       <div className="gifs-liked">
-        {gifsLiked.map((gif) => {
+        {gifsLiked.map((gif, index) => {
           return (
             <div style={{ position: "relative" }}
-              key={"div" + gif.id}>
-              <Gif id={gif.id} key={gif.id} />
+              key={"div" + index}>
+              <Gif id={gif.id} key={index} />
               <FontAwesomeIcon icon={faTimesCircle}
                 className="fa-times-circle"
-                key={"icon" + gif.id}
+                key={"icon" + index}
               />
             </div>
           );
