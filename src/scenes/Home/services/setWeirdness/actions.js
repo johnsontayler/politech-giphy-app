@@ -1,6 +1,7 @@
 export const CHANGE_WEIRDNESS = 'CHANGE_WEIRDNESS';
 export const SET_WEIRDNESS = 'SET_WEIRDNESS';
-export const ADD_WEIRDNESS = 'ADD_WEIRDNESS';
+export const ADD_SCORE = 'ADD_SCORE';
+export const SUBTRACT_SCORE = 'SUBTRACT_SCORE';
 
 let weirdnessNum = 0;
 
@@ -45,10 +46,18 @@ export function setWeirdness() {
   };
 }
 
-export function addWeirdness(gifWeirdness) {
+export function addScore(gifWeirdness) {
 
   return {
-    type: ADD_WEIRDNESS,
+    type: ADD_SCORE,
+    gifWeirdness: gifWeirdness
+  };
+}
+
+export function subtractScore(gifWeirdness) {
+
+  return {
+    type: SUBTRACT_SCORE,
     gifWeirdness: gifWeirdness
   };
 }
