@@ -1,10 +1,10 @@
 //  External modules
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 
 //  Components+Containers
 import SearchBar from './components/SearchBar';
 import ButtonLike from './components/ButtonLike';
+import ButtonCalculate from './components/ButtonCalculate';
 import GifResult from './containers/GifResult';
 import GifsLiked from './containers/GifsLiked';
 import GifsLikedCounter from './containers/GifsLikedCounter';
@@ -47,13 +47,7 @@ class App extends Component {
             <br />
             <br />
             <br />
-            <Link to="/results">
-              <button className="btn btn-primary btn-calcuate my-2 my-sm-0"
-                type="submit"
-                style={{ borderRadius: 2 }}>
-                CALCULATE MY WEIRDNESS SCORE
-              </button>
-            </Link>
+            <ButtonCalculate />
             <br />
             <br />
             <GifsLikedCounter />
