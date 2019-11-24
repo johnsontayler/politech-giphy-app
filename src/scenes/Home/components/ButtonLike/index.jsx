@@ -12,8 +12,7 @@ class LikeButton extends Component {
 
   handleLike = (e) => {
     e.preventDefault();
-    const gif = this.props.gif;
-    this.props.likeGif(gif);
+    this.props.likeGif(this.props.gifResult);
   };
 
   render() {
@@ -42,7 +41,7 @@ function mapDispatchToProps(dispatch) {
 
 function mapStateToProps(state) {
   return {
-    gif: state.gif
+    gifResult: state.gifs.result
   };
 }
 

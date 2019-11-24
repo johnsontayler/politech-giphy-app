@@ -8,17 +8,17 @@ import Gif from '../../components/Gif';
 class GifResult extends Component {
 
   render() {
-    const gif = this.props.gif;
+    const gifResult = this.props.gifResult;
 
     return (
-      <Gif id={gif.id} />
+      <Gif id={gifResult.id} />
     );
   }
 }
 
 function mapStateToProps(state) {
   return {
-    gif: state.gif
+    gifResult: state.gifs.result
   };
 }
 
