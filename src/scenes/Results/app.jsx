@@ -18,7 +18,7 @@ class App extends Component {
           <WeirdnessScore />
           <div className="final-gifs-liked">
             <p style={{ textAlign: "left" }}>
-              The GIFs you liked
+              <strong>The GIFs you liked</strong>
             </p>
             <GifsLikedResult />
           </div>
