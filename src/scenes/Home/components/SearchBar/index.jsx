@@ -8,7 +8,7 @@ import { setGif } from '../../services/setGifs/actions';
 
 class SearchBar extends Component {
 
-  componentWillMount() {
+  componentDidMount() {
     this.props.setGif('Hamburger');
   }
 
