@@ -7,14 +7,14 @@ import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 
 // Actions
 import { likeGif } from '../../services/setGifs/actions';
-import { addWeirdness } from '../../services/setWeirdness/actions';
+import { addScore } from '../../services/setWeirdness/actions';
 
 class LikeButton extends Component {
 
   handleLike = (e) => {
     e.preventDefault();
     this.props.likeGif(this.props.gifResult);
-    this.props.addWeirdness(this.props.gifWeirdness)
+    this.props.addScore(this.props.gifWeirdness);
   };
 
   render() {
@@ -38,7 +38,7 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators(
     {
       likeGif: likeGif,
-      addWeirdness: addWeirdness
+      addScore: addScore
     },
     dispatch
   );
