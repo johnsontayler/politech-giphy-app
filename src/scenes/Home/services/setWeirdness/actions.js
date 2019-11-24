@@ -1,5 +1,7 @@
 export const CHANGE_WEIRDNESS = 'CHANGE_WEIRDNESS';
 export const SET_WEIRDNESS = 'SET_WEIRDNESS';
+export const ADD_SCORE = 'ADD_SCORE';
+export const SUBTRACT_SCORE = 'SUBTRACT_SCORE';
 
 let weirdnessNum = 0;
 
@@ -41,5 +43,21 @@ export function setWeirdness() {
   return {
     type: SET_WEIRDNESS,
     number: weirdnessNum
+  };
+}
+
+export function addScore(gifWeirdness) {
+
+  return {
+    type: ADD_SCORE,
+    gifWeirdness: gifWeirdness
+  };
+}
+
+export function subtractScore(gifIndex) {
+
+  return {
+    type: SUBTRACT_SCORE,
+    index: gifIndex
   };
 }

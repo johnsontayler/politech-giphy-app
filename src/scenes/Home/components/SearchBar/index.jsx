@@ -18,7 +18,7 @@ class SearchBar extends Component {
   };
 
   render() {
-    const style = { borderRadius: 2 };
+    const style = { borderRadius: 1 };
 
     return (
       <form className="form-inline my-2 my-lg-0"

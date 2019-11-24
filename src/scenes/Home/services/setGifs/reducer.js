@@ -14,7 +14,7 @@ export default function (prevState = initialState, action) {
     case LIKE_GIF:
       return {
         ...prevState,
-        liked: prevState.liked.concat(action.liked),
+        liked: prevState.liked.concat(action.gifLiked),
         likedCount: prevState.likedCount + action.count
       }
     case UNLIKE_GIF:
