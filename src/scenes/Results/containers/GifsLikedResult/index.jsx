@@ -8,6 +8,9 @@ import Gif from '../../../components/Gif';
 class GifsLikedResult extends Component {
 
   render() {
+
+    const weirdnessScores = this.props.weirdnessScores;
+
     return (
       <div className="gifs-liked">
         {this.props.gifsLiked.map((gif, index) => {
@@ -18,6 +21,7 @@ class GifsLikedResult extends Component {
                 {gif.title.substring(0, 23)}
               </p>
               <Gif id={gif.id} key={index} />
+              <p>{weirdnessScores[index]}/10</p>
             </div>
           );
         })}
@@ -27,7 +31,10 @@ class GifsLikedResult extends Component {
 }
 
 function mapStateToProps(state) {
-  return { gifsLiked: state.gifs.liked };
+  return {
+    gifsLiked: state.gifs.liked,
+    weirdnessScores: state.weirdness.scores
+  };
 }
 
 export default connect(mapStateToProps)(GifsLikedResult);
