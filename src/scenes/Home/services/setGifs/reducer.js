@@ -2,7 +2,6 @@ import { SET_GIF, LIKE_GIF, UNLIKE_GIF } from './actions';
 
 const initialState = {
   result: [],
-  weirdness: 0,
   liked: [],
   likedCount: 0
 }
@@ -11,11 +10,7 @@ export default function (prevState = initialState, action) {
 
   switch (action.type) {
     case SET_GIF:
-      return {
-        ...prevState,
-        result: action.payload.data,
-        weirdness: action.weirdness
-      }
+      return { ...prevState, result: action.payload.data }
     case LIKE_GIF:
       return {
         ...prevState,
