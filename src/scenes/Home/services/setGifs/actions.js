@@ -16,7 +16,8 @@ export function setGif(query) {
 
   return {
     type: SET_GIF,
-    payload: promise
+    payload: promise,
+    weirdness: weirdness
   };
 }
 
