@@ -16,12 +16,10 @@ class WeirdnessSlider extends Component {
 
   handleWeirdness = () => {
     event.preventDefault();
-    // const weirdness = this.props.weirdness
     this.props.setWeirdness();
   }
 
   componentDidUpdate() {
-    console.log("weirdness prop: " + this.props.weirdness)
     this.props.setGif(this.props.weirdness);
   }
 
