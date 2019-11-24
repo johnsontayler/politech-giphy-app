@@ -2,7 +2,7 @@ export const CHANGE_WEIRDNESS = 'CHANGE_WEIRDNESS';
 export const SET_WEIRDNESS = 'SET_WEIRDNESS';
 export const ADD_SCORE = 'ADD_SCORE';
 export const SUBTRACT_SCORE = 'SUBTRACT_SCORE';
-export const FINAL_SCORE = 'SUBTRACT_SCORE';
+export const CALCULATE_SCORE = 'CALCULATE_SCORE';
 
 let weirdnessNum = 0;
 
@@ -63,9 +63,9 @@ export function subtractScore(gifIndex) {
   };
 }
 
-export function finalScore() {
+export function calculateScore() {
 
   return {
-    type: FINAL_SCORE
+    type: CALCULATE_SCORE
   };
 }
