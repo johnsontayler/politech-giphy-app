@@ -11,7 +11,10 @@ export default function (prevState = initialState, action) {
     case SET_WEIRDNESS:
       return { ...prevState, number: action.number }
     case ADD_WEIRDNESS:
-      return { ...prevState, score: action.gifWeirdness }
+      return {
+        ...prevState,
+        score: prevState.score + action.gifWeirdness
+      }
     default:
       return prevState;
   }
