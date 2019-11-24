@@ -1,5 +1,5 @@
 import {
-  SET_WEIRDNESS, ADD_SCORE, SUBTRACT_SCORE, FINAL_SCORE
+  SET_WEIRDNESS, ADD_SCORE, SUBTRACT_SCORE, CALCULATE_SCORE
 } from './actions';
 
 const initialState = {
@@ -25,12 +25,10 @@ export default function (prevState = initialState, action) {
           index != action.index
         })
       }
-    case FINAL_SCORE:
+    case CALCULATE_SCORE:
       return {
         ...prevState,
-        finalScore: prevState.scores.reduce((a, b) => {
-          (Math.round((a + b) / 5)), 0
-        })
+        finalScore: prevState.scores.reduce((a, b) => a + b, 0) / 5
       }
     default:
       return prevState;
