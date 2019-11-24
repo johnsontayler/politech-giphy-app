@@ -15,10 +15,11 @@ class ButtonLike extends Component {
     e.preventDefault();
 
     if (this.props.gifsLikedCount === 5) {
-      alert("You've already liked 5 Gifs. Calculate your score!");
+      alert("Just kidding...you've already liked 5 GIFs. Calculate your score!");
     } else {
       this.props.likeGif(this.props.gifResult);
       this.props.addScore(this.props.gifWeirdness);
+      alert("Keep adding GIFs ya weirdo!");
     }
   };
 
