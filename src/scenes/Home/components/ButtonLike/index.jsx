@@ -14,13 +14,27 @@ class ButtonLike extends Component {
   handleLike = (e) => {
     e.preventDefault();
 
-    if (this.props.gifsLikedCount === 5) {
-      alert("Just kidding...you've already liked 5 GIFs. Calculate your score!");
-    } else {
-      this.props.likeGif(this.props.gifResult);
-      this.props.addScore(this.props.gifWeirdness);
-      alert("Keep adding GIFs ya weirdo!");
+    switch (this.props.gifsLikedCount) {
+      case 4:
+        return this.props.likeGif(this.props.gifResult),
+          this.props.addScore(this.props.gifWeirdness);
+      case 5:
+        return alert(
+          "You've already liked 5 GIFs. Calculate your score!"
+        );
+      default:
+        this.props.likeGif(this.props.gifResult);
+        this.props.addScore(this.props.gifWeirdness);
+        alert("Woo! Keep adding GIFs ya weirdo.");
     }
+
+    // if (this.props.gifsLikedCount === 5) {
+    //   alert("Just kidding...you've already liked 5 GIFs. Calculate your score!");
+    // } else {
+    //   this.props.likeGif(this.props.gifResult);
+    //   this.props.addScore(this.props.gifWeirdness);
+    //   alert("Woo! Keep adding GIFs ya weirdo.");
+    // }
   };
 
   render() {
