@@ -15,11 +15,11 @@ export default function (prevState = initialState, action) {
         ...prevState,
         score: prevState.score.concat(action.gifWeirdness)
       }
-    // case SUBTRACT_SCORE:
-    //   return {
-    //     ...prevState,
-    //     score: prevState.score - action.gifWeirdness
-    //   }
+    case SUBTRACT_SCORE:
+      return {
+        ...prevState,
+        score: prevState.score.filter((num, index) => index != action.index)
+      }
     default:
       return prevState;
   }
