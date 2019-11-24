@@ -10,7 +10,6 @@ import { calculateScore } from '../../services/setWeirdness/actions';
 class ButtonCalculate extends Component {
 
   handleCalculation = (e) => {
-    // e.preventDefault();
     this.props.calculateScore()
   };
 
