@@ -14,11 +14,11 @@ import Home from './scenes/Home/app';
 
 //  Reducers
 import setGifsReducer from './scenes/Home/services/setGifs/reducer';
-// import gifsLikedReducer from './scenes/Home/services/setGifs/reducers/gifs_liked_reducer';
+import setWeirdnessReducer from './scenes/Home/services/setWeirdness/reducer';
 
 const reducers = combineReducers({
   gifs: setGifsReducer,
-  // gifsLiked: gifsLikedReducer,
+  weirdness: setWeirdnessReducer
 });
 
 const middlewares = applyMiddleware(logger, reduxPromise);
