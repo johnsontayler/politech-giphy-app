@@ -7,7 +7,7 @@ import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 
 // Actions
 import { likeGif } from '../../services/setGifs/actions';
-import { addWeirdness } from '../../services/setGifs/actions';
+import { addWeirdness } from '../../services/setWeirdness/actions';
 
 class LikeButton extends Component {
 
