@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 //  Components+Containers
-import GifsLikedResult from './components/GifsLikedResult';
+import GifsLikedResult from './components/GifsLikedResult/';
 
 class App extends Component {
   render() {
