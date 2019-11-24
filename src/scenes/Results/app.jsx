@@ -3,9 +3,11 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 //  Components+Containers
-import GifsLikedResult from './components/GifsLikedResult/';
+import GifsLikedResult from './components/GifsLikedResult';
+import WeirdnessScore from './components/WeirdnessScore';
 
 class App extends Component {
+
   render() {
     return (
       <div>
@@ -13,9 +15,7 @@ class App extends Component {
           <h2>Weirdness Calculator</h2>
         </div>
         <div className="results">
-          <h3 className="final-score">
-            <strong>You scored an 8 out of 10 on the weirdness scale!</strong>
-          </h3>
+          <WeirdnessScore />
           <div className="final-gifs-liked">
             <p style={{ textAlign: "left" }}>
               The GIFs you liked
@@ -25,6 +25,7 @@ class App extends Component {
           <Link to="/">
             <button className="btn btn-primary my-2 my-sm-0"
               type="submit"
+              onClick={this.clearGifsLiked}
               style={{ borderRadius: 2 }}>
               START OVER
           </button>
