@@ -10,6 +10,8 @@ const initialState = {
 
 export default function (prevState = initialState, action) {
 
+  let scoreCalculation = prevState.scores.reduce((a, b) => a + b, 0) / 5;
+
   switch (action.type) {
     case SET_WEIRDNESS:
       return { ...prevState, number: action.number }
@@ -28,7 +30,7 @@ export default function (prevState = initialState, action) {
     case CALCULATE_SCORE:
       return {
         ...prevState,
-        finalScore: prevState.scores.reduce((a, b) => a + b, 0) / 5
+        finalScore: Math.round(scoreCalculation)
       }
     default:
       return prevState;
