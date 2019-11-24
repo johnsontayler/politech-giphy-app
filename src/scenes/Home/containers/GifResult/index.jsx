@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 //  Components
-import Gif from '../../components/Gif';
+import Gif from '../../../components/Gif';
 
 class GifResult extends Component {
 

@@ -4,9 +4,8 @@ import { connect } from 'react-redux';
 
 //  Components
 import Gif from '../../../components/Gif';
-import ButtonUnlike from '../../components/ButtonUnlike';
 
-class GifsLiked extends Component {
+class GifsLikedResult extends Component {
 
   render() {
     return (
@@ -16,7 +15,6 @@ class GifsLiked extends Component {
             <div style={{ position: "relative" }}
               key={"div" + index}>
               <Gif id={gif.id} key={index} />
-              <ButtonUnlike gifIndex={index} />
             </div>
           );
         })}
@@ -29,5 +27,5 @@ function mapStateToProps(state) {
   return { gifsLiked: state.gifs.liked };
 }
 
-export default connect(mapStateToProps)(GifsLiked);
+export default connect(mapStateToProps)(GifsLikedResult);
 

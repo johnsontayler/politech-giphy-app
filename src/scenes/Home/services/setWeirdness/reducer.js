@@ -1,8 +1,11 @@
-import { SET_WEIRDNESS, ADD_SCORE, SUBTRACT_SCORE } from './actions';
+import {
+  SET_WEIRDNESS, ADD_SCORE, SUBTRACT_SCORE, CALCULATE_SCORE
+} from './actions';
 
 const initialState = {
   number: 0,
-  score: [],
+  scores: [],
+  finalScore: 0,
 }
 
 export default function (prevState = initialState, action) {
@@ -13,12 +16,19 @@ export default function (prevState = initialState, action) {
     case ADD_SCORE:
       return {
         ...prevState,
-        score: prevState.score.concat(action.gifWeirdness)
+        scores: prevState.scores.concat(action.gifWeirdness)
       }
     case SUBTRACT_SCORE:
       return {
         ...prevState,
-        score: prevState.score.filter((num, index) => index != action.index)
+        scores: prevState.scores.filter((num, index) => {
+          index != action.index
+        })
+      }
+    case CALCULATE_SCORE:
+      return {
+        ...prevState,
+        finalScore: prevState.scores.reduce((a, b) => a + b, 0) / 5
       }
     default:
       return prevState;

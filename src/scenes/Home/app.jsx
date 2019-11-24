@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 //  Components+Containers
 import SearchBar from './components/SearchBar';
 import ButtonLike from './components/ButtonLike';
+import ButtonCalculate from './components/ButtonCalculate';
 import GifResult from './containers/GifResult';
 import GifsLiked from './containers/GifsLiked';
 import GifsLikedCounter from './containers/GifsLikedCounter';
@@ -26,7 +27,7 @@ class App extends Component {
               </p>
               <p>
                 When you find a GIF that you like, press the
-                <i>Like</i> button. Once you like 5 GIFs, we'll show you how
+                <i> Like</i> button. Once you like 5 GIFs, we'll show you how
                 weird you are.
               </p>
               <SearchBar />
@@ -46,11 +47,7 @@ class App extends Component {
             <br />
             <br />
             <br />
-            <button className="btn btn-primary btn-calcuate my-2 my-sm-0"
-              type="submit"
-              style={{ borderRadius: 2 }}>
-              CALCULATE MY WEIRDNESS SCORE
-            </button>
+            <ButtonCalculate />
             <br />
             <br />
             <GifsLikedCounter />
