@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 //  Components+Containers
-import GifsLikedResult from './components/GifsLikedResult';
-import WeirdnessScore from './components/WeirdnessScore';
+import GifsLikedResult from './containers/GifsLikedResult';
+import WeirdnessScore from './containers/WeirdnessScore';
 
 class App extends Component {
 
