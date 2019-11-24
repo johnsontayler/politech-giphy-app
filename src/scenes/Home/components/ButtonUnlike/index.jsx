@@ -7,12 +7,14 @@ import { faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 
 // Actions
 import { unlikeGif } from '../../services/setGifs/actions';
+import { subtractScore } from '../../services/setWeirdness/actions';
 
 class ButtonUnlike extends Component {
 
   handleRemove = (e) => {
     e.preventDefault();
     this.props.unlikeGif(this.props.gifIndex);
+    this.props.subtractScore(this.props.gifIndex);
   };
 
   render() {
@@ -27,7 +29,7 @@ class ButtonUnlike extends Component {
 
 function mapDispatchToProps(dispatch) {
   return bindActionCreators(
-    { unlikeGif: unlikeGif },
+    { unlikeGif: unlikeGif, subtractScore: subtractScore },
     dispatch
   );
 }
