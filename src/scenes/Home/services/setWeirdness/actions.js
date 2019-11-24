@@ -1,5 +1,6 @@
 export const CHANGE_WEIRDNESS = 'CHANGE_WEIRDNESS';
 export const SET_WEIRDNESS = 'SET_WEIRDNESS';
+export const ADD_WEIRDNESS = 'ADD_WEIRDNESS';
 
 let weirdnessNum = 0;
 
@@ -41,5 +42,13 @@ export function setWeirdness() {
   return {
     type: SET_WEIRDNESS,
     number: weirdnessNum
+  };
+}
+
+export function addWeirdness(gifWeirdness) {
+
+  return {
+    type: ADD_WEIRDNESS,
+    gifWeirdness: gifWeirdness
   };
 }
