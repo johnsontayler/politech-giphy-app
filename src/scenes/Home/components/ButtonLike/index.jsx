@@ -13,8 +13,13 @@ class ButtonLike extends Component {
 
   handleLike = (e) => {
     e.preventDefault();
-    this.props.likeGif(this.props.gifResult);
-    this.props.addScore(this.props.gifWeirdness);
+
+    if (this.props.gifsLikedCount === 5) {
+      alert("You've already liked 5 Gifs. Calculate your score!");
+    } else {
+      this.props.likeGif(this.props.gifResult);
+      this.props.addScore(this.props.gifWeirdness);
+    }
   };
 
   render() {
@@ -32,6 +37,7 @@ class ButtonLike extends Component {
       </button >
     );
   }
+
 }
 
 function mapDispatchToProps(dispatch) {
@@ -47,7 +53,8 @@ function mapDispatchToProps(dispatch) {
 function mapStateToProps(state) {
   return {
     gifResult: state.gifs.result,
-    gifWeirdness: state.weirdness.number
+    gifWeirdness: state.weirdness.number,
+    gifsLikedCount: state.gifs.likedCount
   };
 }
 
