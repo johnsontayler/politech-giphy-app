@@ -1,19 +1,16 @@
 //  External modules
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 
 //  Components
 import Gif from '../../../components/Gif';
 
-class GifResult extends Component {
+const GifResult = (props) => {
+  const gifResult = props.gifResult;
 
-  render() {
-    const gifResult = this.props.gifResult;
-
-    return (
-      <Gif id={gifResult.id} />
-    );
-  }
+  return (
+    <Gif id={gifResult.id} />
+  );
 }
 
 function mapStateToProps(state) {

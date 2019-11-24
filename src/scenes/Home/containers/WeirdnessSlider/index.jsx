@@ -9,6 +9,10 @@ import { setGif } from '../../services/setGifs/actions';
 
 class WeirdnessSlider extends Component {
 
+  componentDidUpdate() {
+    this.props.setGif(this.props.weirdness);
+  }
+
   handleSlide = (event) => {
     event.preventDefault();
     this.props.changeWeirdness(event);
@@ -19,19 +23,18 @@ class WeirdnessSlider extends Component {
     this.props.setWeirdness();
   }
 
-  componentDidUpdate() {
-    this.props.setGif(this.props.weirdness);
-  }
-
   render() {
     return (
-      <div id="weirdnessSlider" className="weirdness-slider">
-        <div className="thumb"
+      <div id="weirdnessSlider"
+        className="weirdness-slider">
+        <div
+          className="thumb"
           onMouseDown={this.handleSlide}
           onMouseUp={this.handleWeirdness}
           onDragStart={() => false}>
         </div>
-        <p style={{ textAlign: "left", marginTop: 10 }}>
+        <p
+          style={{ textAlign: "left", marginTop: 10 }}>
           Weirdness: {this.props.weirdness}
         </p>
       </div >
@@ -55,4 +58,3 @@ function mapStateToProps(state) {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(WeirdnessSlider);
-

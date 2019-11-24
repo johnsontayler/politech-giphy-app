@@ -8,8 +8,8 @@ let weirdnessNum = 0;
 
 export function changeWeirdness(event) {
   const weirdnessSlider = document.getElementById('weirdnessSlider');
-  let thumb = weirdnessSlider.querySelector('.thumb');
-  let shiftX = event.clientX - thumb.getBoundingClientRect().left;
+  const thumb = weirdnessSlider.querySelector('.thumb');
+  const shiftX = event.clientX - thumb.getBoundingClientRect().left;
 
   document.addEventListener('mousemove', onMouseMove);
   document.addEventListener('mouseup', onMouseUp);
@@ -20,7 +20,7 @@ export function changeWeirdness(event) {
     if (newLeft < 0) {
       newLeft = 0;
     }
-    let rightEdge = weirdnessSlider.offsetWidth - thumb.offsetWidth;
+    const rightEdge = weirdnessSlider.offsetWidth - thumb.offsetWidth;
     if (newLeft > rightEdge) {
       newLeft = rightEdge;
     }
@@ -40,7 +40,6 @@ export function changeWeirdness(event) {
 }
 
 export function setWeirdness() {
-
   return {
     type: SET_WEIRDNESS,
     number: weirdnessNum
@@ -48,7 +47,6 @@ export function setWeirdness() {
 }
 
 export function addScore(gifWeirdness) {
-
   return {
     type: ADD_SCORE,
     gifWeirdness: gifWeirdness
@@ -56,7 +54,6 @@ export function addScore(gifWeirdness) {
 }
 
 export function subtractScore(gifIndex) {
-
   return {
     type: SUBTRACT_SCORE,
     index: gifIndex
@@ -64,7 +61,6 @@ export function subtractScore(gifIndex) {
 }
 
 export function calculateScore() {
-
   return {
     type: CALCULATE_SCORE
   };

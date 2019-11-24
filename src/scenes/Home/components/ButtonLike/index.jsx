@@ -10,7 +10,6 @@ import { likeGif } from '../../services/setGifs/actions';
 import { addScore } from '../../services/setWeirdness/actions';
 
 class ButtonLike extends Component {
-
   handleLike = (e) => {
     e.preventDefault();
 
@@ -27,14 +26,6 @@ class ButtonLike extends Component {
         this.props.addScore(this.props.gifWeirdness);
         alert("Woo! Keep adding GIFs ya weirdo.");
     }
-
-    // if (this.props.gifsLikedCount === 5) {
-    //   alert("Just kidding...you've already liked 5 GIFs. Calculate your score!");
-    // } else {
-    //   this.props.likeGif(this.props.gifResult);
-    //   this.props.addScore(this.props.gifWeirdness);
-    //   alert("Woo! Keep adding GIFs ya weirdo.");
-    // }
   };
 
   render() {
@@ -44,7 +35,8 @@ class ButtonLike extends Component {
     };
 
     return (
-      <button className="btn btn-primary btn-like my-2 my-sm-0"
+      <button
+        className="btn btn-primary btn-like my-2 my-sm-0"
         onClick={this.handleLike}
         type="submit"
         style={style}>
@@ -52,7 +44,6 @@ class ButtonLike extends Component {
       </button >
     );
   }
-
 }
 
 function mapDispatchToProps(dispatch) {

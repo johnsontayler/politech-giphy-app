@@ -20,7 +20,6 @@ export function setGif(query) {
 }
 
 export function likeGif(gif) {
-
   return {
     type: LIKE_GIF,
     gifLiked: gif,
@@ -29,7 +28,6 @@ export function likeGif(gif) {
 }
 
 export function unlikeGif(index) {
-
   return {
     type: UNLIKE_GIF,
     index: index,

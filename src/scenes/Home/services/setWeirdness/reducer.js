@@ -23,9 +23,9 @@ export default function (prevState = initialState, action) {
     case SUBTRACT_SCORE:
       return {
         ...prevState,
-        scores: prevState.scores.filter((num, index) => {
+        scores: prevState.scores.filter((num, index) =>
           index != action.index
-        })
+        )
       }
     case CALCULATE_SCORE:
       return {

@@ -1,33 +1,34 @@
 //  External modules
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 
 //  Components
 import Gif from '../../../components/Gif';
 
-class GifsLikedResult extends Component {
+const GifsLikedResult = (props) => {
+  const weirdnessScores = props.weirdnessScores;
 
-  render() {
-
-    const weirdnessScores = this.props.weirdnessScores;
-
-    return (
-      <div className="gifs-liked">
-        {this.props.gifsLiked.map((gif, index) => {
-          return (
-            <div style={{ position: "relative" }}
-              key={"div" + index}>
-              <p key={gif.title} className="gif-title">
-                {gif.title.substring(0, 23)}
-              </p>
-              <Gif id={gif.id} key={index} />
-              <p>{weirdnessScores[index]}/10</p>
-            </div>
-          );
-        })}
-      </div>
-    );
-  }
+  return (
+    <div className="gifs-liked">
+      {props.gifsLiked.map((gif, index) => {
+        return (
+          <div
+            style={{ position: "relative" }}
+            key={"div" + index}>
+            <p
+              key={gif.title}
+              className="gif-title">
+              {gif.title.substring(0, 23)}
+            </p>
+            <Gif id={gif.id} key={index} />
+            <p>
+              {weirdnessScores[index]}/10
+            </p>
+          </div>
+        );
+      })}
+    </div>
+  );
 }
 
 function mapStateToProps(state) {
@@ -38,4 +39,3 @@ function mapStateToProps(state) {
 }
 
 export default connect(mapStateToProps)(GifsLikedResult);
-

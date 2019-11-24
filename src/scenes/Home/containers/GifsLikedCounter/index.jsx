@@ -1,22 +1,31 @@
 //  External modules
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 
-class GifsLikedCounter extends Component {
-  render() {
-    const countsLeft = 5 - this.props.gifsLikedCount;
+const GifsLikedCounter = (props) => {
+  const countsLeft = 5 - props.gifsLikedCount;
 
-    switch (countsLeft) {
-      case 0:
-        return <p>Calculate your score!</p>;
-      case 1:
-        return <p>You must <i> Like </i>
-          {countsLeft} more GIF to calculate your score.</p>;
-      default:
-        return <p>You must <i> Like </i>{countsLeft} more GIFs
-        to calculate your score.</p>;
-    };
-  }
+  switch (countsLeft) {
+    case 0:
+      return <p>Calculate your score!</p>;
+    case 1:
+      return (
+        <p>
+          You must
+          <i> Like </i>
+          {countsLeft} more GIF to calculate your score.
+        </p>
+      )
+    default:
+      return (
+        <p>
+          You must
+          <i> Like </i>
+          {countsLeft} more GIFs
+          to calculate your score.
+        </p>
+      )
+  };
 }
 
 function mapStateToProps(state) {
@@ -24,4 +33,3 @@ function mapStateToProps(state) {
 }
 
 export default connect(mapStateToProps)(GifsLikedCounter);
-
