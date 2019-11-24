@@ -1,4 +1,5 @@
 export const CHANGE_WEIRDNESS = 'CHANGE_WEIRDNESS';
+export const SET_WEIRDNESS = 'SET_WEIRDNESS';
 
 let weirdnessNum = 0;
 
@@ -31,7 +32,14 @@ export function changeWeirdness(event) {
   }
 
   return {
-    type: CHANGE_WEIRDNESS,
+    type: CHANGE_WEIRDNESS
+  };
+}
+
+export function setWeirdness() {
+
+  return {
+    type: SET_WEIRDNESS,
     number: weirdnessNum
   };
 }
