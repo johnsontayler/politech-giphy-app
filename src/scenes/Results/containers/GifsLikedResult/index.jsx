@@ -14,6 +14,9 @@ class GifsLikedResult extends Component {
           return (
             <div style={{ position: "relative" }}
               key={"div" + index}>
+              <p key={gif.title} className="gif-title">
+                {gif.title.substring(0, 23)}
+              </p>
               <Gif id={gif.id} key={index} />
             </div>
           );
