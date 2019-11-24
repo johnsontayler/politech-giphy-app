@@ -48,8 +48,7 @@ body {
     .gif {
       width: 50%;
       min-height: 200px;
-      max-width: 80%;
-      max-height: 80%;
+      max-width: 300px;
       margin: auto;
     }
 
@@ -87,17 +86,24 @@ body {
     column-count: 2;
     column-gap: 30px;
 
+    .gif-title {
+      position: absolute;
+      top: 15px;
+      right: 25%;
+    }
+
     .gif {
       width: 100%;
       min-height: 200px;
       max-height: 200px;
       margin: 5px;
+      margin-top: 40px;
     }
 
     .fa-times-circle {
       position: absolute;
       font-size: 1em;
-      top: 10px;
+      top: 45px;
       right: 0;
       color: yellow;
       cursor: pointer;
