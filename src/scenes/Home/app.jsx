@@ -7,6 +7,7 @@ import ButtonLike from './components/ButtonLike';
 import GifResult from './containers/GifResult';
 import GifsLiked from './containers/GifsLiked';
 import GifsLikedCounter from './containers/GifsLikedCounter';
+import WeirdnessSlider from './containers/WeirdnessSlider';
 
 class App extends Component {
   render() {
@@ -36,6 +37,7 @@ class App extends Component {
               <br />
               <br />
               <ButtonLike />
+              <WeirdnessSlider />
             </div>
           </div>
           <div className="right-scene">
