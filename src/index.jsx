@@ -18,7 +18,7 @@ import setWeirdnessReducer from './scenes/Home/services/setWeirdness/reducer';
 
 const reducers = combineReducers({
   gifs: setGifsReducer,
-  weirdness: setWeirdnessReducer,
+  weirdness: setWeirdnessReducer
 });
 
 const middlewares = applyMiddleware(logger, reduxPromise);
