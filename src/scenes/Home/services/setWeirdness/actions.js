@@ -54,10 +54,10 @@ export function addScore(gifWeirdness) {
   };
 }
 
-export function subtractScore(gifWeirdness) {
+export function subtractScore(gifIndex) {
 
   return {
     type: SUBTRACT_SCORE,
-    gifWeirdness: gifWeirdness
+    index: gifIndex
   };
 }
