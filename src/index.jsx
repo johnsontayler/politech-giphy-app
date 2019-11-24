@@ -13,12 +13,12 @@ import '../assets/stylesheets/application.scss';
 import Home from './scenes/Home/app';
 
 //  Reducers
-import gifReducer from './scenes/Home/services/setGifs/reducers/gif_reducer';
-import gifsLikedReducer from './scenes/Home/services/setGifs/reducers/gifs_liked_reducer';
+import setGifsReducer from './scenes/Home/services/setGifs/reducer';
+// import gifsLikedReducer from './scenes/Home/services/setGifs/reducers/gifs_liked_reducer';
 
 const reducers = combineReducers({
-  gif: gifReducer,
-  gifsLiked: gifsLikedReducer,
+  gifs: setGifsReducer,
+  // gifsLiked: gifsLikedReducer,
 });
 
 const middlewares = applyMiddleware(logger, reduxPromise);

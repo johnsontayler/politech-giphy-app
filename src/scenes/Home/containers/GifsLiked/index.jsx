@@ -9,11 +9,9 @@ import ButtonUnlike from '../../components/ButtonUnlike';
 class GifsLiked extends Component {
 
   render() {
-    const gifsLiked = this.props.gifsLiked;
-
     return (
       <div className="gifs-liked">
-        {gifsLiked.map((gif, index) => {
+        {this.props.gifsLiked.map((gif, index) => {
           return (
             <div style={{ position: "relative" }}
               key={"div" + index}>
@@ -28,7 +26,7 @@ class GifsLiked extends Component {
 }
 
 function mapStateToProps(state) {
-  return { gifsLiked: state.gifsLiked.gifs };
+  return { gifsLiked: state.gifs.liked };
 }
 
 export default connect(mapStateToProps)(GifsLiked);

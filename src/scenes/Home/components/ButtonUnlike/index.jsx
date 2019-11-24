@@ -12,8 +12,7 @@ class ButtonUnlike extends Component {
 
   handleRemove = (e) => {
     e.preventDefault();
-    const gifIndex = this.props.gifIndex;
-    this.props.removeGif(gifIndex);
+    this.props.unlikeGif(this.props.gifIndex);
   };
 
   render() {

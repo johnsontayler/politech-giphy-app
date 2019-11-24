@@ -20,7 +20,7 @@ class GifsLikedCounter extends Component {
 }
 
 function mapStateToProps(state) {
-  return { gifsLikedCount: state.gifsLiked.count };
+  return { gifsLikedCount: state.gifs.likedCount };
 }
 
 export default connect(mapStateToProps)(GifsLikedCounter);
