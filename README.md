@@ -22,7 +22,7 @@ To lint all JavaScript files in the `src` folder:
 yarn lint
 ```
 
-To build and deploy your app to `gh-pages` branch on the GitHub repo:
+To build and deploy app to `gh-pages` branch on the GitHub repo:
 
 ```bash
 yarn deploy
