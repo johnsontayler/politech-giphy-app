@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 
 // Actions
 import { changeWeirdness } from '../../services/setWeirdness/actions';
+import { setWeirdness } from '../../services/setWeirdness/actions';
 
 class WeirdnessSlider extends Component {
 
@@ -13,11 +14,17 @@ class WeirdnessSlider extends Component {
     this.props.changeWeirdness(event);
   }
 
+  handleWeirdness = () => {
+    event.preventDefault();
+    this.props.setWeirdness();
+  }
+
   render() {
     return (
       <div id="weirdnessSlider" className="weirdness-slider">
         <div className="thumb"
           onMouseDown={this.handleSlide}
+          onMouseUp={this.handleWeirdness}
           onDragStart={() => false}>
         </div>
       </div>
@@ -27,7 +34,10 @@ class WeirdnessSlider extends Component {
 
 function mapDispatchToProps(dispatch) {
   return bindActionCreators(
-    { changeWeirdness: changeWeirdness },
+    {
+      changeWeirdness: changeWeirdness,
+      setWeirdness: setWeirdness
+    },
     dispatch
   );
 }
