@@ -2,11 +2,17 @@ export const SET_GIF = 'SET_GIF';
 export const LIKE_GIF = 'LIKE_GIF';
 export const UNLIKE_GIF = 'UNLIKE_GIF';
 
-export function setGif(term) {
-  let weirdness = 10;
+let term = "";
+let weirdness = 0;
+
+export function setGif(query) {
+  typeof query === "string" ? (term = query) : "";
+  typeof query === "number" ? (weirdness = query) : "";
+
   const GIPHY_API_KEY = 'dFHHRwtfNPxLFWUitpW96f1QWdm6AceW';
   const url = `http://api.giphy.com/v1/gifs/translate?s=${term}?weirdness=${weirdness}&api_key=${GIPHY_API_KEY}`;
   const promise = fetch(url).then(response => response.json());
+  console.log(url);
 
   return {
     type: SET_GIF,
