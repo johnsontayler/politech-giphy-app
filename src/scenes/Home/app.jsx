@@ -1,5 +1,6 @@
 //  External modules
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 //  Components+Containers
 import SearchBar from './components/SearchBar';
@@ -26,7 +27,7 @@ class App extends Component {
               </p>
               <p>
                 When you find a GIF that you like, press the
-                <i>Like</i> button. Once you like 5 GIFs, we'll show you how
+                <i> Like</i> button. Once you like 5 GIFs, we'll show you how
                 weird you are.
               </p>
               <SearchBar />
@@ -46,11 +47,13 @@ class App extends Component {
             <br />
             <br />
             <br />
-            <button className="btn btn-primary btn-calcuate my-2 my-sm-0"
-              type="submit"
-              style={{ borderRadius: 2 }}>
-              CALCULATE MY WEIRDNESS SCORE
-            </button>
+            <Link to="/results">
+              <button className="btn btn-primary btn-calcuate my-2 my-sm-0"
+                type="submit"
+                style={{ borderRadius: 2 }}>
+                CALCULATE MY WEIRDNESS SCORE
+              </button>
+            </Link>
             <br />
             <br />
             <GifsLikedCounter />
