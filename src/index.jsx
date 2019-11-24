@@ -3,14 +3,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { logger } from 'redux-logger';
 import reduxPromise from 'redux-promise';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { createHistory as history } from 'history';
 
 //  Internal modules
 import '../assets/stylesheets/application.scss';
 import Home from './scenes/Home/app';
+import Results from './scenes/Results/app';
 
 //  Reducers
 import setGifsReducer from './scenes/Home/services/setGifs/reducer';
@@ -28,10 +28,10 @@ const root = document.getElementById('root');
 if (root) {
   ReactDOM.render(
     <Provider store={createStore(reducers, middlewares)}>
-      <Router history={history}>
+      <Router>
         <Switch>
-          <Route path="/" component={Home} />
-          {/* <Route path="/:results" component={AppResults} /> */}
+          <Route exact path="/" component={Home} />
+          <Route path="/results" component={Results} />
         </Switch>
       </Router>
     </Provider>, root
