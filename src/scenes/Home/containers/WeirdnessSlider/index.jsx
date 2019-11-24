@@ -31,7 +31,10 @@ class WeirdnessSlider extends Component {
           onMouseUp={this.handleWeirdness}
           onDragStart={() => false}>
         </div>
-      </div>
+        <p style={{ textAlign: "left", marginTop: 10 }}>
+          Weirdness: {this.props.weirdness}
+        </p>
+      </div >
     );
   }
 }
