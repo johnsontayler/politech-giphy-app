@@ -4,8 +4,8 @@ class WeirdnessSlider extends Component {
 
   render() {
     return (
-      <div id="weirdnessslider" class="weirdness-slider">
-        <div class="thumb"></div>
+      <div id="weirdnessslider" className="weirdness-slider">
+        <div className="thumb"></div>
       </div>
     );
   }
