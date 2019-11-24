@@ -7,7 +7,6 @@ import GifsLikedResult from './containers/GifsLikedResult';
 import WeirdnessScore from './containers/WeirdnessScore';
 
 class App extends Component {
-
   render() {
     return (
       <div>
@@ -18,15 +17,17 @@ class App extends Component {
           <WeirdnessScore />
           <div className="final-gifs-liked">
             <p style={{ textAlign: "left" }}>
-              The GIFs you liked
+              <strong>The GIFs you liked</strong>
             </p>
             <GifsLikedResult />
           </div>
           <Link to="/">
-            <button className="btn btn-primary my-2 my-sm-0"
+            <button
+              className="btn btn-primary my-2 my-sm-0"
               type="submit"
               onClick={this.clearGifsLiked}
-              style={{ borderRadius: 2 }}>
+              style={{ borderRadius: 2 }}
+            >
               START OVER
           </button>
           </Link>

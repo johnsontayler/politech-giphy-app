@@ -10,9 +10,9 @@ import { unlikeGif } from '../../services/setGifs/actions';
 import { subtractScore } from '../../services/setWeirdness/actions';
 
 class ButtonUnlike extends Component {
-
   handleRemove = (e) => {
     e.preventDefault();
+    console.log(this.props.gifIndex);
     this.props.unlikeGif(this.props.gifIndex);
     this.props.subtractScore(this.props.gifIndex);
   };

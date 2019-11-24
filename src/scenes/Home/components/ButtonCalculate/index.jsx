@@ -8,15 +8,22 @@ import { Link } from 'react-router-dom';
 import { calculateScore } from '../../services/setWeirdness/actions';
 
 class ButtonCalculate extends Component {
-
-  handleCalculation = (e) => {
-    this.props.calculateScore()
+  handleCalculation = () => {
+    if (this.props.gifsLikedCount < 5) {
+      alert("You must like 5 GIFs to calculate your score.")
+    } else {
+      this.props.calculateScore();
+    }
   };
 
   render() {
+    let path = ""
+    this.props.gifsLikedCount < 5 ? path = "/" : path = "/results";
+
     return (
-      <Link to="/results" onClick={this.handleCalculation}>
-        <button className="btn btn-primary btn-calcuate my-2 my-sm-0"
+      <Link to={path} onClick={this.handleCalculation}>
+        <button
+          className="btn btn-primary btn-calcuate my-2 my-sm-0"
           type="submit"
           style={{ borderRadius: 2 }}>
           CALCULATE MY WEIRDNESS SCORE
@@ -26,8 +33,12 @@ class ButtonCalculate extends Component {
   }
 }
 
+function mapStateToProps(state) {
+  return { gifsLikedCount: state.gifs.likedCount };
+}
+
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({ calculateScore: calculateScore }, dispatch);
 }
 
-export default connect(null, mapDispatchToProps)(ButtonCalculate);
+export default connect(mapStateToProps, mapDispatchToProps)(ButtonCalculate);
