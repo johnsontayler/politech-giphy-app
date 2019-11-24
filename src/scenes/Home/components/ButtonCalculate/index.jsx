@@ -5,21 +5,20 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 // Actions
-import { finalScore } from '../../services/setGifs/actions';
+import { calculateScore } from '../../services/setWeirdness/actions';
 
 class ButtonCalculate extends Component {
 
   handleCalculation = (e) => {
-    e.preventDefault();
-    this.props.finalScore();
+    // e.preventDefault();
+    this.props.calculateScore()
   };
 
   render() {
     return (
-      <Link to="/results">
+      <Link to="/results" onClick={this.handleCalculation}>
         <button className="btn btn-primary btn-calcuate my-2 my-sm-0"
           type="submit"
-          onClick={this.handleCalculation}
           style={{ borderRadius: 2 }}>
           CALCULATE MY WEIRDNESS SCORE
         </button>
@@ -29,10 +28,7 @@ class ButtonCalculate extends Component {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators(
-    { finalScore: finalScore },
-    dispatch
-  );
+  return bindActionCreators({ calculateScore: calculateScore }, dispatch);
 }
 
 export default connect(null, mapDispatchToProps)(ButtonCalculate);
