@@ -4,8 +4,8 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 // Actions
-import { changeWeirdness } from '../../services/setWeirdness/actions';
-import { setWeirdness } from '../../services/setWeirdness/actions';
+import { changeWeirdness, setWeirdness } from '../../services/setWeirdness/actions';
+import { setGif } from '../../services/setGifs/actions';
 
 class WeirdnessSlider extends Component {
 
@@ -16,7 +16,13 @@ class WeirdnessSlider extends Component {
 
   handleWeirdness = () => {
     event.preventDefault();
+    // const weirdness = this.props.weirdness
     this.props.setWeirdness();
+  }
+
+  componentDidUpdate() {
+    console.log("weirdness prop: " + this.props.weirdness)
+    this.props.setGif(this.props.weirdness);
   }
 
   render() {
@@ -36,11 +42,16 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators(
     {
       changeWeirdness: changeWeirdness,
-      setWeirdness: setWeirdness
+      setWeirdness: setWeirdness,
+      setGif: setGif
     },
     dispatch
   );
 }
 
-export default connect(null, mapDispatchToProps)(WeirdnessSlider);
+function mapStateToProps(state) {
+  return { weirdness: state.weirdness.number };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(WeirdnessSlider);
 
