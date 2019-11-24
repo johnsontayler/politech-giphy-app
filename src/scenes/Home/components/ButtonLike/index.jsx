@@ -9,7 +9,7 @@ import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 import { likeGif } from '../../services/setGifs/actions';
 import { addScore } from '../../services/setWeirdness/actions';
 
-class LikeButton extends Component {
+class ButtonLike extends Component {
 
   handleLike = (e) => {
     e.preventDefault();
@@ -51,4 +51,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(LikeButton);
+export default connect(mapStateToProps, mapDispatchToProps)(ButtonLike);
