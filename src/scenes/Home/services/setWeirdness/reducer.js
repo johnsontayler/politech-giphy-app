@@ -1,5 +1,6 @@
 import {
-  SET_WEIRDNESS, ADD_SCORE, SUBTRACT_SCORE, CALCULATE_SCORE
+  SET_WEIRDNESS, ADD_SCORE, SUBTRACT_SCORE,
+  CALCULATE_SCORE, RESET_WEIRDNESS_RESULT
 } from './actions';
 
 const initialState = {
@@ -31,6 +32,13 @@ export default function (prevState = initialState, action) {
         ...prevState,
         finalScore: Math.round(scoreCalculation)
       }
+    case RESET_WEIRDNESS_RESULT:
+      return {
+        ...prevState,
+        weirdness: 0,
+        scores: [],
+        finalScore: 0
+      };
     default:
       return prevState;
   }
