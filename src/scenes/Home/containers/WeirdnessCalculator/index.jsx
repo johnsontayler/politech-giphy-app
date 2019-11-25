@@ -18,7 +18,7 @@ import { resetGifsLiked } from '../../services/setGifs/actions';
 class WeirdnessCalculator extends Component {
 
   componentDidMount() {
-    const historyGifsLiked = history.state.state.gifsLiked
+    const historyGifsLiked = history.state
     if (historyGifsLiked) {
       this.props.resetGifsLiked()
     }
