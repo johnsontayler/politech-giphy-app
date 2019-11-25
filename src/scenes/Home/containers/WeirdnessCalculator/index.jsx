@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import createHistory from 'history/createBrowserHistory'
 
 //  Components
 import GifsLiked from '../../components/GifsLiked';
@@ -13,8 +14,18 @@ import GifsLikedCounter from '../../components/GifsLikedCounter';
 import { unlikeGif } from '../../services/setGifs/actions';
 import { subtractScore } from '../../services/setWeirdness/actions';
 import { calculateScore } from '../../services/setWeirdness/actions';
+import { resetGifsLiked } from '../../services/setGifs/actions';
 
 class WeirdnessCalculator extends Component {
+
+  componentDidMount() {
+    const history = createHistory();
+    const historyGifsLiked = history.location.state.gifsLiked;
+    if (historyGifsLiked) {
+      console.log("restart calculator");
+      this.props.resetGifsLiked()
+    }
+  }
 
   handleUnlikeGif = (gifIndex) => {
     this.props.unlikeGif(gifIndex);
@@ -54,10 +65,8 @@ class WeirdnessCalculator extends Component {
         <br />
         <GifsLikedCounter countsLeft={5 - gifsLikedCount} />
       </div>
-
     )
-
-  }
+  };
 }
 
 function mapStateToProps(state) {
@@ -72,7 +81,8 @@ function mapDispatchToProps(dispatch) {
     {
       unlikeGif: unlikeGif,
       subtractScore: subtractScore,
-      calculateScore: calculateScore
+      calculateScore: calculateScore,
+      resetGifsLiked: resetGifsLiked
     },
     dispatch
   );
