@@ -3,7 +3,6 @@ import React from 'react';
 
 //  Components+Containers
 import SearchBar from './components/SearchBar';
-import ButtonLike from './components/ButtonLike';
 import ButtonCalculate from './components/ButtonCalculate';
 import GifResult from './containers/GifResult';
 import GifsLiked from './containers/GifsLiked';
@@ -27,16 +26,13 @@ const App = (props) => {
             <p>
               When you find a GIF that you like, press the
                 <i> Like</i> button. Once you like 5 GIFs, we'll show you how
-              weird you are.
+        weird you are.
               </p>
             <SearchBar />
           </div>
           <div className="gif-result">
             <h3>YOUR RESULT</h3>
             <GifResult />
-            <br />
-            <br />
-            <ButtonLike />
             <WeirdnessSlider />
           </div>
         </div>
