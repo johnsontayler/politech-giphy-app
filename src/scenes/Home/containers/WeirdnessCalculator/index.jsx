@@ -13,8 +13,16 @@ import GifsLikedCounter from '../../components/GifsLikedCounter';
 import { unlikeGif } from '../../services/setGifs/actions';
 import { subtractScore } from '../../services/setWeirdness/actions';
 import { calculateScore } from '../../services/setWeirdness/actions';
+import { resetGifsLiked } from '../../services/setGifs/actions';
 
 class WeirdnessCalculator extends Component {
+
+  componentDidMount() {
+    const historyGifsLiked = history.state.state.gifsLiked
+    if (historyGifsLiked) {
+      this.props.resetGifsLiked()
+    }
+  }
 
   handleUnlikeGif = (gifIndex) => {
     this.props.unlikeGif(gifIndex);
@@ -54,10 +62,8 @@ class WeirdnessCalculator extends Component {
         <br />
         <GifsLikedCounter countsLeft={5 - gifsLikedCount} />
       </div>
-
     )
-
-  }
+  };
 }
 
 function mapStateToProps(state) {
@@ -72,7 +78,8 @@ function mapDispatchToProps(dispatch) {
     {
       unlikeGif: unlikeGif,
       subtractScore: subtractScore,
-      calculateScore: calculateScore
+      calculateScore: calculateScore,
+      resetGifsLiked: resetGifsLiked
     },
     dispatch
   );

@@ -1,6 +1,7 @@
 export const SET_GIF = 'SET_GIF';
 export const LIKE_GIF = 'LIKE_GIF';
 export const UNLIKE_GIF = 'UNLIKE_GIF';
+export const RESET_GIFS = 'RESET_GIFS';
 
 let term = "";
 let weirdness = 0;
@@ -34,3 +35,10 @@ export function unlikeGif(index) {
     count: 1
   };
 }
+
+export function resetGifsLiked() {
+  return {
+    type: RESET_GIFS,
+  };
+}
+

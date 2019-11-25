@@ -112,10 +112,18 @@ body {
   }
 }
 
-#confettiGif {
+.gif-confetti {
   position: fixed;
   width: 50%;
   left: 25%;
+  z-index: 2;
+  transition: 2s;
+  opacity: 1;
+}
+
+.gif-confetti.remove {
+  opacity: 0;
+  z-index: -1;
 }
 
 .results {
