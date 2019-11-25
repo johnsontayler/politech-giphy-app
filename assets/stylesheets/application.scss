@@ -83,8 +83,9 @@ body {
   position: relative;
 
   .gifs-liked {
-    column-count: 2;
-    column-gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
     .gif-title {
       position: absolute;
@@ -93,18 +94,17 @@ body {
     }
 
     .gif {
-      width: 100%;
-      min-height: 200px;
-      max-height: 200px;
-      margin: 5px;
+      width: 240px;
+      height: 215px;
+      margin: 15px;
       margin-top: 40px;
     }
 
     .fa-times-circle {
       position: absolute;
       font-size: 1em;
-      top: 45px;
-      right: 0;
+      top: 46px;
+      right: 20px;
       color: yellow;
       cursor: pointer;
     }

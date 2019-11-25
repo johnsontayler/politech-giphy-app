@@ -3,7 +3,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 //  Components
-import Gif from '../../../components/Gif';
+import Gif from '../../../../components/Gif';
 
 const GifsLikedResult = (props) => {
   const weirdnessScores = props.weirdnessScores;

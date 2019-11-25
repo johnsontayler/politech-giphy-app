@@ -1,16 +1,17 @@
 //  External modules
 import React from 'react';
-import { connect } from 'react-redux';
 
 //  Components
-import Gif from '../../../components/Gif';
-import ButtonUnlike from '../../components/ButtonUnlike';
+import Gif from '../../../../components/Gif';
+import ButtonUnlike from '../ButtonUnlike';
 
 const GifsLiked = (props) => {
+  const { gifsLiked, unlikeGif } = props
+
   return (
     <div
       className="gifs-liked">
-      {props.gifsLiked.map((gif, index) => {
+      {gifsLiked.map((gif, index) => {
         return (
           <div
             style={{ position: "relative" }}
@@ -21,7 +22,8 @@ const GifsLiked = (props) => {
               {gif.title.substring(0, 23)}
             </p>
             <Gif id={gif.id} key={"Gif" + gif.title} />
-            <ButtonUnlike gifIndex={index} />
+            <ButtonUnlike
+              handleClick={() => unlikeGif(index)} />
           </div>
         );
       })}
@@ -29,8 +31,4 @@ const GifsLiked = (props) => {
   );
 }
 
-function mapStateToProps(state) {
-  return { gifsLiked: state.gifs.liked };
-}
-
-export default connect(mapStateToProps)(GifsLiked);
+export default GifsLiked;

@@ -1,9 +1,8 @@
 //  External modules
 import React from 'react';
-import { connect } from 'react-redux';
 
 const GifsLikedCounter = (props) => {
-  const countsLeft = 5 - props.gifsLikedCount;
+  const { countsLeft } = props
 
   switch (countsLeft) {
     case 0:
@@ -28,8 +27,4 @@ const GifsLikedCounter = (props) => {
   };
 }
 
-function mapStateToProps(state) {
-  return { gifsLikedCount: state.gifs.likedCount };
-}
-
-export default connect(mapStateToProps)(GifsLikedCounter);
+export default GifsLikedCounter;
