@@ -1,4 +1,7 @@
-import { SET_GIF, LIKE_GIF, UNLIKE_GIF } from './actions';
+import {
+  SET_GIF, LIKE_GIF,
+  UNLIKE_GIF, RESET_GIFS
+} from './actions';
 
 const initialState = {
   result: [],
@@ -23,6 +26,8 @@ export default function (prevState = initialState, action) {
         liked: prevState.liked.filter((gif, index) => index !== action.index),
         likedCount: prevState.likedCount - action.count
       };
+    case RESET_GIFS:
+      return { ...prevState, liked: [], likedCount: 0 };
     default:
       return prevState;
   }
