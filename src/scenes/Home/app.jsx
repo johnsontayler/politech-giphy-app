@@ -1,7 +1,8 @@
 //  External modules
 import React from 'react';
 
-// Containers
+// Components+Containers
+import Banner from '../../components/Banner';
 import SearchBar from './components/SearchBar';
 import GifResult from './containers/GifResult';
 import WeirdnessSlider from './containers/WeirdnessSlider';
@@ -10,9 +11,7 @@ import WeirdnessCalculator from './containers/WeirdnessCalculator';
 const App = (props) => {
   return (
     <div>
-      <div className="banner">
-        <h2>Weirdness Calculator</h2>
-      </div>
+      <Banner />
       <div className="main-content">
         <div className="left-scene">
           <div className="search-container">

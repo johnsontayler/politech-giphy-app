@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 //  Components+Containers
+import GifConfetti from './components/GifConfetti';
+import Banner from '../../components/Banner';
 import GifsLikedResult from './containers/GifsLikedResult';
 import WeirdnessScore from './containers/WeirdnessScore';
 
@@ -10,9 +12,8 @@ class App extends Component {
   render() {
     return (
       <div>
-        <div className="banner">
-          <h2>Weirdness Calculator</h2>
-        </div>
+        <GifConfetti />
+        <Banner />
         <div className="results">
           <WeirdnessScore />
           <div className="final-gifs-liked">
