@@ -10,17 +10,20 @@ import Button from '../../../../components/Button';
 import GifsLikedCounter from '../../components/GifsLikedCounter';
 
 // Actions
-import { unlikeGif } from '../../services/setGifs/actions';
-import { subtractScore } from '../../services/setWeirdness/actions';
-import { calculateScore } from '../../services/setWeirdness/actions';
-import { resetGifsLiked } from '../../services/setGifs/actions';
+import { unlikeGif, resetGifsLiked } from
+  '../../services/setGifs/actions';
+import { subtractScore, calculateScore, resetWeirdnessResult } from
+  '../../services/setWeirdness/actions';
 
 class WeirdnessCalculator extends Component {
 
   componentDidMount() {
-    const historyGifsLiked = history.state
-    if (historyGifsLiked) {
+    const calculatorHistory = history.state
+
+    if (calculatorHistory) {
       this.props.resetGifsLiked()
+      this.props.resetWeirdnessResult()
+      delete calculatorHistory.state
     }
   }
 
@@ -79,7 +82,8 @@ function mapDispatchToProps(dispatch) {
       unlikeGif: unlikeGif,
       subtractScore: subtractScore,
       calculateScore: calculateScore,
-      resetGifsLiked: resetGifsLiked
+      resetGifsLiked: resetGifsLiked,
+      resetWeirdnessResult: resetWeirdnessResult
     },
     dispatch
   );

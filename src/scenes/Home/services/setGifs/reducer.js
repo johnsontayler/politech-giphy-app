@@ -1,10 +1,12 @@
 import {
-  SET_GIF, LIKE_GIF,
+  SET_GIF, GIF_ERROR, LIKE_GIF,
   UNLIKE_GIF, RESET_GIFS
 } from './actions';
 
 const initialState = {
   result: [],
+  resultError: null,
+  errorInfo: null,
   liked: [],
   likedCount: 0
 };
@@ -28,6 +30,11 @@ export default function (prevState = initialState, action) {
       };
     case RESET_GIFS:
       return { ...prevState, liked: [], likedCount: 0 };
+    case GIF_ERROR:
+      return {
+        ...prevState,
+        resultError: action.error, errorInfo: action.errorInfo
+      };
     default:
       return prevState;
   }

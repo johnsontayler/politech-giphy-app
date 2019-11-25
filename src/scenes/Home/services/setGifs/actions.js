@@ -2,6 +2,7 @@ export const SET_GIF = 'SET_GIF';
 export const LIKE_GIF = 'LIKE_GIF';
 export const UNLIKE_GIF = 'UNLIKE_GIF';
 export const RESET_GIFS = 'RESET_GIFS';
+export const GIF_ERROR = 'GIF_ERROR';
 
 let term = "";
 let weirdness = 0;
@@ -18,6 +19,14 @@ export function setGif(query) {
     type: SET_GIF,
     payload: promise
   };
+}
+
+export function setGifError(error, errorInfo) {
+  return {
+    type: GIF_ERROR,
+    error: error,
+    errorInfo: errorInfo
+  }
 }
 
 export function likeGif(gif) {

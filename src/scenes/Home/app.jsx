@@ -7,6 +7,7 @@ import SearchBar from './components/SearchBar';
 import GifResult from './containers/GifResult';
 import WeirdnessSlider from './containers/WeirdnessSlider';
 import WeirdnessCalculator from './containers/WeirdnessCalculator';
+import ErrorBoundary from '../../components/ErrorBoundary'
 
 const App = () => {
   return (
@@ -30,7 +31,9 @@ const App = () => {
           </div>
           <div className="gif-result">
             <h3>YOUR RESULT</h3>
-            <GifResult />
+            <ErrorBoundary>
+              <GifResult />
+            </ErrorBoundary>
             <WeirdnessSlider />
           </div>
         </div>
