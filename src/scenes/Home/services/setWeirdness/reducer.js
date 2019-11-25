@@ -9,7 +9,6 @@ const initialState = {
 }
 
 export default function (prevState = initialState, action) {
-
   let scoreCalculation = prevState.scores.reduce((a, b) => a + b, 0) / 5;
 
   switch (action.type) {

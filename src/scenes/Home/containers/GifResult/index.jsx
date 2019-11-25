@@ -30,7 +30,9 @@ class GifResult extends Component {
       default:
         this.props.likeGif(gifResult);
         this.props.addScore(gifWeirdness);
-        alert("Woo! Keep adding GIFs ya weirdo.");
+        setTimeout(() => {
+          alert("Woo! Keep adding GIFs ya weirdo.");
+        }, 500);
     }
   };
 
