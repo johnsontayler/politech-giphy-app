@@ -4,6 +4,8 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
+import Button from '../../../../components/Button'
+
 // Actions
 import { calculateScore } from '../../services/setWeirdness/actions';
 
@@ -22,12 +24,10 @@ class ButtonCalculate extends Component {
 
     return (
       <Link to={path} onClick={this.handleCalculation}>
-        <button
-          className="btn btn-primary btn-calcuate my-2 my-sm-0"
-          type="submit"
-          style={{ borderRadius: 2 }}>
-          CALCULATE MY WEIRDNESS SCORE
-        </button>
+        <Button
+          id="btnCalculate"
+          style={{ borderRadius: 2 }}
+          text="CALCULATE MY WEIRDNESS SCORE" />
       </Link>
     );
   }

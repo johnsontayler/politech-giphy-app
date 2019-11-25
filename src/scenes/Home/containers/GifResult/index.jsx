@@ -7,8 +7,8 @@ import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 
 
 //  Components
-import Gif from '../../../components/Gif';
-import Button from '../../../components/Button'
+import Gif from '../../../../components/Gif';
+import Button from '../../../../components/Button'
 
 // Actions
 import { likeGif } from '../../services/setGifs/actions';
