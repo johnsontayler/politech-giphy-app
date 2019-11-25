@@ -35,7 +35,7 @@ export default function (prevState = initialState, action) {
     case RESET_WEIRDNESS_RESULT:
       return {
         ...prevState,
-        weirdness: 0,
+        number: 0,
         scores: [],
         finalScore: 0
       };
