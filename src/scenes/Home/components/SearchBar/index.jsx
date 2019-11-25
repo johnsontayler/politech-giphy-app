@@ -16,7 +16,14 @@ class SearchBar extends Component {
 
   onSubmit = (e) => {
     e.preventDefault();
-    this.props.setGif(e.target.search.value);
+    const term = e.target.search.value
+
+    if (term == "") {
+      alert("A word must be submitted");
+      return false;
+    }
+
+    return this.props.setGif(term);
   };
 
   render() {
