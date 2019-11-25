@@ -34,7 +34,7 @@ class WeirdnessSlider extends Component {
           onDragStart={() => false}>
         </div>
         <p
-          style={{ textAlign: "left", marginTop: 10 }}>
+          style={{ textAlign: "left" }}>
           Weirdness: {this.props.weirdness}
         </p>
       </div >

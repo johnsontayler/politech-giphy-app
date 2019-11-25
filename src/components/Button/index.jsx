@@ -5,7 +5,7 @@ const Button = (props) => {
 
   return (
     <button
-      className="btn btn-primary my-2 my-sm-0"
+      className="btn btn-success my-2 my-sm-0"
       id={id}
       type="submit"
       style={style}

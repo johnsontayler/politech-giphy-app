@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 import GifConfetti from './components/GifConfetti';
 import Banner from '../../components/Banner';
 import WeirdnessResults from './containers/WeirdnessResults';
+import Button from '../../components/Button'
 
 //  Actions
 import { toggleConfetti } from './services/setResults/actions';
@@ -33,14 +34,10 @@ class App extends Component {
             pathname: "/",
             state: { gifsLiked: gifsLiked }
           }}>
-            <button
-              className="btn btn-primary my-2 my-sm-0"
-              type="submit"
-              onClick={() => this.props.toggleConfetti()}
-              style={{ borderRadius: 2 }}
-            >
-              START OVER
-          </button>
+            <Button
+              handleClick={() => this.props.toggleConfetti()}
+              text="START OVER"
+            />
           </Link>
         </div>
       </div >

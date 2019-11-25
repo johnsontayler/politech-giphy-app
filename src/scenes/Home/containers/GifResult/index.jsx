@@ -17,10 +17,21 @@ import { addScore } from '../../services/setWeirdness/actions';
 class GifResult extends Component {
   handleLike = (e) => {
     e.preventDefault();
-    const { gifResult, gifWeirdness } = this.props;
+    const { gifResult, gifWeirdness, gifsLikedCount } = this.props;
 
-    this.props.likeGif(gifResult);
-    this.props.addScore(gifWeirdness);
+    switch (gifsLikedCount) {
+      case 4:
+        return this.props.likeGif(gifResult),
+          this.props.addScore(gifWeirdness);
+      case 5:
+        return alert(
+          "You've already liked 5 GIFs. Calculate your score!"
+        );
+      default:
+        this.props.likeGif(gifResult);
+        this.props.addScore(gifWeirdness);
+        alert("Woo! Keep adding GIFs ya weirdo.");
+    }
   };
 
   render() {
@@ -44,7 +55,8 @@ class GifResult extends Component {
 function mapStateToProps(state) {
   return {
     gifResult: state.gifs.result,
-    gifWeirdness: state.weirdness.number
+    gifWeirdness: state.weirdness.number,
+    gifsLikedCount: state.gifs.likedCount
   };
 }
 
