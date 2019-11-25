@@ -8,7 +8,7 @@ import GifResult from './containers/GifResult';
 import WeirdnessSlider from './containers/WeirdnessSlider';
 import WeirdnessCalculator from './containers/WeirdnessCalculator';
 
-const App = (props) => {
+const App = () => {
   return (
     <div>
       <Banner />
@@ -19,13 +19,13 @@ const App = (props) => {
               Find out how weird you are by selecting the GIFs that make
               you laugh. We'll show you the latest weird ones to start,
               but you can move the slider to make them weirder.
-            </p>
+              </p>
             <p>
               When you find a GIF that you like, press the
-              <i> Like </i>
+                <i> Like </i>
               button. Once you like 5 GIFs, we'll show you how
               weird you are.
-            </p>
+              </p>
             <SearchBar />
           </div>
           <div className="gif-result">
