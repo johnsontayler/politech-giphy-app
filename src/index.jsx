@@ -3,7 +3,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Router as Router, Route, Switch } from 'react-router-dom';
+import history from './history';
 import { logger } from 'redux-logger';
 import reduxPromise from 'redux-promise';
 
@@ -30,7 +31,7 @@ const root = document.getElementById('root');
 if (root) {
   ReactDOM.render(
     <Provider store={createStore(reducers, middlewares)}>
-      <Router>
+      <Router history={history}>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/results" component={Results} />
