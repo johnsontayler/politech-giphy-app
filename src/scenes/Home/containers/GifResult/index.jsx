@@ -15,7 +15,6 @@ import { likeGif } from '../../services/setGifs/actions';
 import { addScore } from '../../services/setWeirdness/actions';
 
 class GifResult extends Component {
-
   handleLike = (e) => {
     e.preventDefault();
     const { gifResult, gifWeirdness } = this.props;
