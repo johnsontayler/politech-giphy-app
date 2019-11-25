@@ -15,10 +15,12 @@ import Results from './scenes/Results/app';
 //  Reducers
 import setGifsReducer from './scenes/Home/services/setGifs/reducer';
 import setWeirdnessReducer from './scenes/Home/services/setWeirdness/reducer';
+import setResultsReducer from './scenes/Results/services/setResults/reducer';
 
 const reducers = combineReducers({
   gifs: setGifsReducer,
-  weirdness: setWeirdnessReducer
+  weirdness: setWeirdnessReducer,
+  results: setResultsReducer
 });
 
 const middlewares = applyMiddleware(logger, reduxPromise);
