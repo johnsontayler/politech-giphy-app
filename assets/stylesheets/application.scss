@@ -1,5 +1,21 @@
 body {
-  font-family: Helvetica;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h2, h3 {
+  font-family: 'Comfortaa', cursive; 
+}
+
+.btn:focus, .form-control:focus {
+  border-color: none;
+  box-shadow: none;
+  outline: none;
+  outline-offset: none;
+}
+
+form:focus {
+  border: none;
+  box-shadow: none;
 }
 
 #root > div {
@@ -10,9 +26,8 @@ body {
   padding: 20px 30px 20px 30px;
   border: 1px solid;
   font-size: 2.6em;
-  background-color: #007bff;
+  background-color: #62d03e;
   color: white;
-  opacity: .65;
 }
 
 .main-content {
