@@ -1,11 +1,10 @@
-export const REMOVE_CONFETTI = 'REMOVE_CONFETTI';
+export const TOGGLE_CONFETTI = 'TOGGLE_CONFETTI';
 
-export function removeConfetti() {
+export function toggleConfetti() {
   const gifConfetti = document.getElementById('gifConfetti');
-  const confettiDisplay = gifConfetti.style.display
 
   return {
-    type: REMOVE_CONFETTI,
-    confettiDisplay: confettiDisplay
+    type: TOGGLE_CONFETTI,
+    gifConfetti: gifConfetti
   };
 }

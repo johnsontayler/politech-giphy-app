@@ -1,13 +1,16 @@
-import { REMOVE_CONFETTI } from './actions';
+import { TOGGLE_CONFETTI } from './actions';
 
 const initialState = {
-  confettiDisplay: ""
+  gifConfetti: []
 };
 
 export default function (prevState = initialState, action) {
   switch (action.type) {
-    case REMOVE_CONFETTI:
-      return { ...prevState, confettiDisplay: "none" };
+    case TOGGLE_CONFETTI:
+      return {
+        ...prevState,
+        gifConfetti: action.gifConfetti.classList.toggle("remove")
+      };
     default:
       return prevState;
   }
