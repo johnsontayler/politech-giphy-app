@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import createHistory from 'history/createBrowserHistory'
+import createHistory from 'history/createBrowserHistory';
 
 //  Components
 import GifsLiked from '../../components/GifsLiked';
@@ -22,7 +22,6 @@ class WeirdnessCalculator extends Component {
     const history = createHistory();
     const historyGifsLiked = history.location.state.gifsLiked;
     if (historyGifsLiked) {
-      console.log("restart calculator");
       this.props.resetGifsLiked()
     }
   }
