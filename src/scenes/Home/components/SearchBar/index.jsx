@@ -3,6 +3,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
+// Components
+import Button from '../../../../components/Button';
+
 //  Actions
 import { setGif } from '../../services/setGifs/actions';
 
@@ -17,7 +20,7 @@ class SearchBar extends Component {
   };
 
   render() {
-    const style = { borderRadius: 1 };
+    const style = { borderRadius: 2 };
 
     return (
       <form
@@ -32,12 +35,9 @@ class SearchBar extends Component {
           style={style}
           aria-label="Search"
         />
-        <button
-          className="btn btn-primary my-2 my-sm-0"
+        <Button
           style={style}
-          type="submit">
-          Search
-        </button>
+          text="Search" />
       </form>
     );
   }
