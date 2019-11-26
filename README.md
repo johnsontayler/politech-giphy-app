@@ -8,6 +8,14 @@ Simple react starter with the following config:
 - work with `.js` or `.jsx` files
 - main `application.scss` stylesheet is imported in `index.js` as a module for hot reloading
 
+## Set Up
+
+```bash
+git clone git@github.com:johnsontayler/politech-giphy-app.git
+yarn install
+yarn start
+```
+
 ## Scripts
 
 To start the local Webpack Dev Server (usually on port `8080`):
