@@ -1,4 +1,7 @@
-Simple react starter with the following config:
+GIPHY WERIIDNESS CALCUTOR 🤪
+Use the Giphy API to show users several GIFs that range from 0-10 on Giphy’s weirdness scale. Users can enter a search term and the app will display a matching GIF starting on 0 weirdness. Using a slider, users can then increase the weirdness and receive weirder and weirder results. When a user finds a GIF they like, they can add it to their list of favorite GIFs by pressing the Like button. Once a user selects their 5 favorite GIFs, they will be prompted to see their result telling them how weird they are.
+
+Config:
 
 - React, ReactDOM, ReactRouterDom
 - Redux, ReactRedux, Redux Logger, Redux Promise
